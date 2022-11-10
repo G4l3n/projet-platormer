@@ -12,20 +12,20 @@ public class Player : MonoBehaviour
     public int NumberOfJumps = 0;
     public float JumpForce = 9.0f;
     SpriteRenderer renderer = null;
-    Animator animator = null;
+    //Animator animator = null;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         renderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         rb.velocity = new Vector2(movement.x*speed, rb.velocity.y);
-        animator.SetBool("IsWalking",movement.x != 0);
+        //animator.SetBool("IsWalking",movement.x != 0);
         if (movement.x != 0)
         {
             renderer.flipX = movement.x < 0;
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             NumberOfJumps--;
-            animator.SetTrigger("HasJumped");
+            //animator.SetTrigger("HasJumped");
         }
     }
 
