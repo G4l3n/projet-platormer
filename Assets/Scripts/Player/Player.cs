@@ -11,9 +11,13 @@ public class Player : MonoBehaviour
     int MaxNumberOfJumps = 2;
     public int NumberOfJumps = 0;
     public float JumpForce = 9.0f;
-    SpriteRenderer renderer = null;
+    new SpriteRenderer renderer = null;
     //Animator animator = null;
     // Start is called before the first frame update
+
+    public HeadRotation headRotation;
+    public GameObject head;
+    public bool isReverse;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,7 +32,16 @@ public class Player : MonoBehaviour
         //animator.SetBool("IsWalking",movement.x != 0);
         if (movement.x != 0)
         {
-            renderer.flipX = movement.x < 0;
+            isReverse = movement.x < 0;
+            renderer.flipX = isReverse;
+            if (isReverse)
+            {
+                headRotation.transform.rotation = Quaternion.Euler(0f, 180f, -headRotation.rotationZ);
+            }
+            else if (!isReverse)
+            {
+                headRotation.transform.rotation = Quaternion.Euler(0f, 0f, -headRotation.rotationZ);
+            }
         }
     }
 
