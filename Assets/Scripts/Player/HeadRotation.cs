@@ -30,17 +30,11 @@ public class HeadRotation : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
 
-        if (rotationZ > 50f && rotationZ < 90f && !player.isReverse){
-            transform.rotation = Quaternion.Euler(0f, 0f, 50f);
+        if (rotationZ > 90f || rotationZ < -90f){
+            transform.localRotation = Quaternion.Euler(180f, 0f, -rotationZ);
         }
-        else if (rotationZ < 130f && rotationZ > 90f && player.isReverse){
-            transform.rotation = Quaternion.Euler(0f, 0f, 130f);
-        }
-        else if (rotationZ < -40f && rotationZ > -90f && !player.isReverse){
-            transform.rotation = Quaternion.Euler(0f, 0f, -40f);
-        }
-        else if (rotationZ > -140f && rotationZ < -90f && player.isReverse){
-            transform.rotation = Quaternion.Euler(0f, 0f, -140f);
+        else{
+            transform.localRotation = Quaternion.Euler(0f, 0f, rotationZ);
         }
     }
 }

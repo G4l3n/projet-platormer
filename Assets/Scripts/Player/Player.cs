@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public float speed = .0f;
     Rigidbody2D rb = null;
     Vector2 movement = Vector2.zero;
-    int MaxNumberOfJumps = 2;
+    int MaxNumberOfJumps = 1;
     public int NumberOfJumps = 0;
     public float JumpForce = 9.0f;
     new SpriteRenderer renderer = null;
@@ -32,16 +32,7 @@ public class Player : MonoBehaviour
         //animator.SetBool("IsWalking",movement.x != 0);
         if (movement.x != 0)
         {
-            isReverse = movement.x < 0;
-            renderer.flipX = isReverse;
-            if (isReverse)
-            {
-                headRotation.transform.rotation = Quaternion.Euler(0f, 180f, -headRotation.rotationZ);
-            }
-            else if (!isReverse)
-            {
-                headRotation.transform.rotation = Quaternion.Euler(0f, 0f, -headRotation.rotationZ);
-            }
+            renderer.flipX = movement.x < 0;
         }
     }
 
