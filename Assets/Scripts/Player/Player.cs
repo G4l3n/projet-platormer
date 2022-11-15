@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     private bool isDashing;
     private float dashingPower = 24f;
     private float dashingTime = 0.15f;
-    private float dashingCooldown = 1f;  
+    private float dashingCooldown = 5f;  
     public float speed = .0f; 
     int MaxNumberOfJumps = 1;
     public int NumberOfJumps = 0;
@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     public bool isReverse;
 
     Rigidbody2D rb = null;
-    Animator animator = null;
+    //Animator animator = null;
     Vector2 movement = Vector2.zero;
     [SerializeField] private TrailRenderer tr;
 
@@ -44,10 +44,11 @@ public class Player : MonoBehaviour
         if (movement.x != 0)
         {
             renderer.flipX = movement.x < 0;
+            isReverse = true;
         }
     }
 
-    public void OnDash(InputValue DashValue)
+    public void OnDash(InputValue dashValue)
     {
         StartCoroutine(Dash());
     }
@@ -60,14 +61,14 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
-            //NumberOfJumps--;
+            NumberOfJumps--;
             //animator.SetTrigger("HasJumped");
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.GetContact(0).normal.y > -0.5f)
+        if (collision.GetContact(0).normal.x > -0.5f)
         {
             NumberOfJumps = MaxNumberOfJumps;
         }
