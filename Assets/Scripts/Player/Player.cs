@@ -9,7 +9,8 @@ public class Player : MonoBehaviour
     private bool isDashing;
     private float dashingPower = 24f;
     private float dashingTime = 0.15f;
-    private float dashingCooldown = 5f;  
+    private float dashingCooldown = 5f;
+
     public float speed = .0f; 
     int MaxNumberOfJumps = 1;
     public int NumberOfJumps = 0;
