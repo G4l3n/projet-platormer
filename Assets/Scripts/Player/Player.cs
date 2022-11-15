@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         renderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
         }
 
         rb.velocity = new Vector2(movement.x * speed, rb.velocity.y);
-        animator.SetBool("IsWalking",movement.x != 0);
+        //animator.SetBool("IsWalking",movement.x != 0);
         if (movement.x != 0)
         {
             renderer.flipX = movement.x < 0;
@@ -60,8 +60,8 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
-            NumberOfJumps--;
-            animator.SetTrigger("HasJumped");
+            //NumberOfJumps--;
+            //animator.SetTrigger("HasJumped");
         }
     }
 
@@ -83,6 +83,7 @@ public class Player : MonoBehaviour
     }
 
     //https://www.youtube.com/watch?v=2kFGmuPHiA0 : dash
+
     private IEnumerator Dash()
     {
         canDash = false;
@@ -97,7 +98,13 @@ public class Player : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
-        Debug.Log($"dash");
     }
 }
+
+
+
+
+
+
+
 
