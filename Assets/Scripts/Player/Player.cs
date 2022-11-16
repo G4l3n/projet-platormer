@@ -5,11 +5,12 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
+    
     private bool canDash = true;
     private bool isDashing;
     private float dashingPower = 24f;
     private float dashingTime = 0.15f;
-    private float dashingCooldown = 5f;
+    private float dashingCooldown = 1.5f;
     private float originalGravity;
 
     public float speed = .0f; 
@@ -26,8 +27,7 @@ public class Player : MonoBehaviour
     Vector2 movement = Vector2.zero;
     [SerializeField] private TrailRenderer tr;
 
-    void Start()
-    {
+    void Start(){      
         rb = GetComponent<Rigidbody2D>();
         renderer = GetComponent<SpriteRenderer>();
         originalGravity = rb.gravityScale;
@@ -37,8 +37,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDashing)
-        {
+        if (isDashing){
             return;
         }
 
@@ -51,17 +50,16 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void OnDash(InputValue dashValue)
-    {
-        StartCoroutine(Dash());
+    public void OnDash(InputValue dashValue){
+        if (canDash){
+            StartCoroutine(Dash());
+        }
     }
 
-    public void OnJump(InputValue jumpValue)
-    {
+    public void OnJump(InputValue jumpValue){
 
         float innerValue = jumpValue.Get<float>();
-        if (innerValue > 0 && rb != null && NumberOfJumps > 0)
-        {
+        if (innerValue > 0 && rb != null && NumberOfJumps > 0){
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             NumberOfJumps--;
@@ -69,17 +67,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.GetContact(0).normal.x > -0.5f)
-        {
+    void OnCollisionEnter2D(Collision2D collision){
+        if (collision.GetContact(0).normal.x > -0.5f){
             NumberOfJumps = MaxNumberOfJumps;
         }
     }
-    public void OnMove(InputValue moveValue)
-    {
-        if (isDashing)
-        {
+    public void OnMove(InputValue moveValue){
+        if (isDashing){
             return;
         }
 
@@ -88,8 +82,7 @@ public class Player : MonoBehaviour
 
     //https://www.youtube.com/watch?v=2kFGmuPHiA0 : dash
 
-    private IEnumerator Dash()
-    {
+    private IEnumerator Dash(){
         canDash = false;
         isDashing = true;
         float dashGravity = 0f;
