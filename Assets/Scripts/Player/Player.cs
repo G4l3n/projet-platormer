@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private float dashingPower = 24f;
     private float dashingTime = 0.15f;
     private float dashingCooldown = 5f;
+    private float originalGravity;
 
     public float speed = .0f; 
     int MaxNumberOfJumps = 1;
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         renderer = GetComponent<SpriteRenderer>();
+        originalGravity = rb.gravityScale;
         //animator = GetComponent<Animator>();
     }
 
@@ -90,8 +92,9 @@ public class Player : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
-        float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
+        float dashGravity = 0f;
+
+        rb.gravityScale = dashGravity;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
