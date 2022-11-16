@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
             NumberOfJumps = MaxNumberOfJumps;
         }
     }
-    public void OnMove(InputValue moveValue){
+    public void OnMove(InputValue moveValue){ 
         movement = moveValue.Get<Vector2>();
     }
 
