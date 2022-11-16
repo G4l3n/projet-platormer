@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.PlayerLoop;
 
-public class testlightsouris : MonoBehaviour
+public class LightInMenu : MonoBehaviour
 {
     public GameObject Light;
     Vector3 posMouse;
