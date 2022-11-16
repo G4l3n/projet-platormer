@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     public bool isReverse;
     new SpriteRenderer renderer = null;
     Rigidbody2D rb = null;
-    //Animator animator = null;
+    Animator animator = null;
     Vector2 movement = Vector2.zero;
 
     int MaxNumberOfJumps = 1;
@@ -32,10 +32,9 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         renderer = GetComponent<SpriteRenderer>();
         originalGravity = rb.gravityScale;
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isDashing){
@@ -43,7 +42,7 @@ public class Player : MonoBehaviour
         }
 
         rb.velocity = new Vector2(movement.x * speed, rb.velocity.y);
-        //animator.SetBool("IsWalking",movement.x != 0);
+        animator.SetBool("IsWalking",movement.x != 0);
         if (movement.x != 0)
         {
             renderer.flipX = movement.x < 0;
@@ -68,23 +67,20 @@ public class Player : MonoBehaviour
 
         float innerValue = jumpValue.Get<float>();
         if (innerValue > 0 && rb != null && NumberOfJumps > 0){
+            animator.SetBool("IsJumping", true);
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             NumberOfJumps--;
-            //animator.SetTrigger("HasJumped");
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision){
         if (collision.GetContact(0).normal.x > -0.5f){
+            animator.SetBool("IsJumping", false);
             NumberOfJumps = MaxNumberOfJumps;
         }
     }
     public void OnMove(InputValue moveValue){
-        if (isDashing){
-            return;
-        }
-
         movement = moveValue.Get<Vector2>();
     }
 
