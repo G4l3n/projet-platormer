@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class BugMovement : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class BugMovement : MonoBehaviour
             renderer.flipX = true;
             moveSpeed = -moveSpeed;
         }
+
+        //Light2D light = player.GetComponentInChildren<Light2D>();
+        //Debug.Log(light.GetType);
     }
 
     void Update()
