@@ -8,20 +8,26 @@ public class BugMovement : MonoBehaviour
     private Vector3 startPos;
     new SpriteRenderer renderer = null;
 
+    private Player player;
+
     void Start()
     {
         startPos = transform.position;
         renderer = GetComponent<SpriteRenderer>();
-        
-        Player player = GetComponent<Player>();
-        Debug.Log(player.transform.position.x);
+
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        if (startPos.x > player.transform.position.x)
+        {
+            renderer.flipX = true;
+            moveSpeed = -moveSpeed;
+        }
     }
 
     void Update()
     {
         Vector2 pos = transform.position;
 
-        pos.x -= moveSpeed * Time.deltaTime;
+        pos.x += moveSpeed * Time.deltaTime;
 
         transform.position = pos;
     }
