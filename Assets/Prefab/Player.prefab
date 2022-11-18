@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1888296820491553666}
   - component: {fileID: 1888296820491553665}
-  - component: {fileID: 8070471296437559561}
-  - component: {fileID: 1888296820491553664}
+  - component: {fileID: 3371800757112216372}
   - component: {fileID: 1888296820491553671}
   - component: {fileID: 1888296820491553670}
   - component: {fileID: 1888296820491553669}
@@ -92,8 +91,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8070471296437559561
-CircleCollider2D:
+--- !u!70 &3371800757112216372
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,35 +104,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.024237633, y: -0.38209766}
-  serializedVersion: 2
-  m_Radius: 0.11861199
---- !u!61 &1888296820491553664
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1888296820491553668}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 772c51f470b179e4798991500cbbf195, type: 2}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0004326254, y: -0.15403986}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.3748773, y: 0.5688317}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.011821866, y: -0.18327469}
+  m_Size: {x: 0.43299937, y: 0.63270366}
+  m_Direction: 0
 --- !u!50 &1888296820491553671
 Rigidbody2D:
   serializedVersion: 4
@@ -150,7 +123,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: 772c51f470b179e4798991500cbbf195, type: 2}
+  m_Material: {fileID: 6200000, guid: adc595ce1d9ed584fb26ddc65c36dc9c, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -512,7 +485,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1888296820598239516}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 772c51f470b179e4798991500cbbf195, type: 2}
+  m_Material: {fileID: 6200000, guid: adc595ce1d9ed584fb26ddc65c36dc9c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
