@@ -20,9 +20,9 @@ public class HeadRotation : MonoBehaviour
 
     // Tuto : https://www.youtube.com/watch?v=6hp9-mslbzI&ab_channel=Nade
 
-    public void FixedUpdate()
+    public void OnLook(InputValue lookValue)
     {
-        Vector3 difference = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position;
 
         difference.Normalize();
 
