@@ -25,7 +25,6 @@ public class Player : MonoBehaviour
     public int NumberOfJumps = 0;
     public float JumpForce = 9.0f;
 
-    public HeadRotation headRotation;
     public GameObject head;
 
     void Start(){      
