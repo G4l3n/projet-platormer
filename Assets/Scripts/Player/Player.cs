@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision){
-        if (collision.GetContact(0).normal.x > -0.5f){
+        if (collision.GetContact(0).normal.y > 0.9f){
             animator.SetBool("IsJumping", false);
             NumberOfJumps = MaxNumberOfJumps;
         }
