@@ -2,29 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireFlyMove : MonoBehaviour
+public class FireflyMove : MonoBehaviour
 {
-    [SerializeField] private Transform pointA;
-    [SerializeField] private Transform pointB;
-    [SerializeField] private Transform pointC;
-    [SerializeField] private Transform pointAB;
-    [SerializeField] private Transform pointBC;
-    [SerializeField] private Transform pointAB_BC;
-
-    private float interpolateAmount;
+    public float moveSpeed = 5.8f;
     void Start()
     {
         
     }
 
-    public void FixedUpdate()
+    private void FixedUpdate()
     {
-        interpolateAmount = (interpolateAmount + Time.deltaTime) % 1;
+        Vector2 pos = transform.position;
 
-        pointAB.position = Vector3.Lerp(pointA.position, pointB.position, interpolateAmount);
+        pos.x -= moveSpeed * Time.fixedDeltaTime;
 
-        pointBC.position = Vector3.Lerp(pointB.position, pointC.position, interpolateAmount);
-
-        pointAB_BC.position = Vector3.Lerp(pointAB.position, pointBC.position, interpolateAmount);
+        transform.position = pos;
     }
 }
