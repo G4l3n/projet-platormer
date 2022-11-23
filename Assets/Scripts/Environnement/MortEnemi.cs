@@ -19,7 +19,7 @@ public class MortEnemi : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 }
