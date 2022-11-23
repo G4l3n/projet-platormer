@@ -22,7 +22,7 @@ public class ScriptSelectionChap : MonoBehaviour
 
     public void LoadLevel4()
     {
-        SceneManager.LoadScene("lvl");
+        SceneManager.LoadScene("lvl4");
     }
 
     public void LoadLevel5()
