@@ -23,4 +23,9 @@ public class Kill : MonoBehaviour
             Destroy(other.gameObject);
         } 
     }
+
+    private void nCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
 }
