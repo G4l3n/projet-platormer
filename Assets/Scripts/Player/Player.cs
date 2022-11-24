@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     public float speed = .0f;
     public bool isReverse;
     new SpriteRenderer renderer = null;
-    Rigidbody2D rb = null;
+    public Rigidbody2D rb = null;
     Animator animator = null;
     Vector2 movement = Vector2.zero;
 

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class BugMovement : MonoBehaviour
 {
@@ -29,10 +31,9 @@ public class BugMovement : MonoBehaviour
 
     void Update()
     {
-        Vector2 pos = transform.position;
+        var x = transform.position.x;
+        var y = transform.position.y; 
 
-        pos.x += moveSpeed * Time.deltaTime;
-
-        transform.position = pos;
+        transform.position = new Vector3(x + moveSpeed * Time.deltaTime, y, startPos.z);
     }
 }

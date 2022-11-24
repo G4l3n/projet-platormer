@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class MortEnemi : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float bounceForce = 9f;
+    private Player player;
+
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -19,6 +20,7 @@ public class MortEnemi : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            player.rb.AddForce(new Vector2(0, bounceForce), ForceMode2D.Impulse);
             Destroy(transform.parent.gameObject);
         }
     }
