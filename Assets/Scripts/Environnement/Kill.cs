@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Kill : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +24,5 @@ public class Kill : MonoBehaviour
         {
             Destroy(other.gameObject);
         } 
-    }
-
-    private void nCollisionEnter2D(Collision2D collision)
-    {
-        
     }
 }

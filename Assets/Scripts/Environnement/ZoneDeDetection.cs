@@ -5,7 +5,9 @@ using UnityEngine;
 public class ZoneDeDetection : MonoBehaviour
 {
 
-    public GameObject zone;
+    public Collider2D zone;
+    public Rigidbody2D body;
+    
 
 
     // Start is called before the first frame update
@@ -22,7 +24,11 @@ public class ZoneDeDetection : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        zone.transform.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        if(other.gameObject.tag == "Player")
+        {
+            zone.transform.GetComponent<Rigidbody2D>().gravityScale = 3;
+        }
+       
     }
 
 
