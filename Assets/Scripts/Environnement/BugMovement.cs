@@ -31,6 +31,7 @@ public class BugMovement : MonoBehaviour
 
     void Update()
     {
+        // check if gameObject is outside of the player vision
         if (transform.position.x > player.transform.position.x && transform.position.x - player.transform.position.x > 15
             || transform.position.x < player.transform.position.x && player.transform.position.x - transform.position.x > 15
             || transform.position.y > player.transform.position.y && transform.position.y - player.transform.position.y > 15
