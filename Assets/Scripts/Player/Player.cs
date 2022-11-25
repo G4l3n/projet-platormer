@@ -4,17 +4,11 @@ using System.Globalization;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.UIElements.Experimental;
+
 public class Player : MonoBehaviour
 {
-    
-    private bool canDash = true;
-    private bool isDashing;
-    private float dashingPower = 24f;
-    private float dashingCooldown = 1f;
-    private float dashingTime = 0.15f;
-    private float originalGravity;
-    [SerializeField] private TrailRenderer tr;
-
+    public Dash Dash;
     public float speed = .0f;
     public bool isReverse;
     new SpriteRenderer renderer = null;
@@ -28,20 +22,19 @@ public class Player : MonoBehaviour
 
     public GameObject head;
 
-    void Start(){      
+    void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
         renderer = GetComponent<SpriteRenderer>();
-        originalGravity = rb.gravityScale;
         animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        if (isDashing){
-            return;
+        if (!Dash)
+        {
+            rb.velocity = new Vector2(movement.x * speed, rb.velocity.y);
         }
-
-        rb.velocity = new Vector2(movement.x * speed, rb.velocity.y);
         animator.SetBool("IsWalking",movement.x != 0);
         if (movement.x != 0)
         {
@@ -49,20 +42,6 @@ public class Player : MonoBehaviour
             isReverse = movement.x < 0;
         }
     }
-
-    public void OnDash(InputValue dashValue){
-        if (canDash){
-            if (isReverse){
-                dashingPower = -dashingPower;
-                StartCoroutine(Dash());
-                dashingPower = -dashingPower;
-            }
-            else{
-                StartCoroutine(Dash());
-            }
-        }
-    }
-
     public void OnJump(InputValue jumpValue){
 
         float innerValue = jumpValue.Get<float>();
@@ -82,23 +61,6 @@ public class Player : MonoBehaviour
     }
     public void OnMove(InputValue moveValue){ 
         movement = moveValue.Get<Vector2>();
-    }
-
-    //https://www.youtube.com/watch?v=2kFGmuPHiA0 : dash
-
-    private IEnumerator Dash(){
-        canDash = false;
-        isDashing = true;
-
-        rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
-        tr.emitting = true;
-        yield return new WaitForSeconds(dashingTime);
-        tr.emitting = false;
-        rb.gravityScale = originalGravity;
-        isDashing = false;
-        yield return new WaitForSeconds(dashingCooldown);
-        canDash = true;
     }
 }
 
