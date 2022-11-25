@@ -31,6 +31,14 @@ public class BugMovement : MonoBehaviour
 
     void Update()
     {
+        if (transform.position.x > player.transform.position.x && transform.position.x - player.transform.position.x > 15
+            || transform.position.x < player.transform.position.x && player.transform.position.x - transform.position.x > 15
+            || transform.position.y > player.transform.position.y && transform.position.y - player.transform.position.y > 15
+            || transform.position.y < player.transform.position.y && player.transform.position.y - transform.position.y > 15)
+        {
+            Destroy(gameObject);
+        }
+
         var x = transform.position.x;
         var y = transform.position.y; 
 
