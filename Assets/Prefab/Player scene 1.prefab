@@ -316,8 +316,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aeb4ca7794e2b443a44ad4a88de9653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dash: {fileID: 6260285936139059212}
   speed: 6
   isReverse: 0
+  rb: {fileID: 0}
   NumberOfJumps: 2
   JumpForce: 9
   head: {fileID: 7724729350899926406}
@@ -333,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58672fd6928849340a4efb8f82117ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tr: {fileID: 0}
+  tr: {fileID: 7724729350096915307}
   isReverse: 0
 --- !u!1 &7724729350097811362
 GameObject:

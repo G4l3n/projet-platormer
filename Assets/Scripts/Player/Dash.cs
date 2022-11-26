@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class Dash : MonoBehaviour
 {
     private bool canDash = true;
-    private bool isDashing;
+    private bool isDashing; 
     private float dashingPower = 24f;
     private float dashingCooldown = 1f;
     private float dashingTime = 0.15f;

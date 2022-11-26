@@ -35,6 +35,10 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(movement.x * speed, rb.velocity.y);
         }
+        else
+        {
+            speed = rb.velocity.magnitude;
+        }
         animator.SetBool("IsWalking",movement.x != 0);
         if (movement.x != 0)
         {
