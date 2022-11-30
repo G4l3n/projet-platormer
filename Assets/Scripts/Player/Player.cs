@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 {
     public Dash Dash;
     public float speed = .0f;
-    public bool isReverse;
+    public bool isReverse { get; private set; }
     new SpriteRenderer renderer = null;
     public Rigidbody2D rb = null;
     Animator animator = null;
@@ -31,13 +31,9 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (!Dash)
+        if (!Dash.isDashing)
         {
             rb.velocity = new Vector2(movement.x * speed, rb.velocity.y);
-        }
-        else
-        {
-            speed = rb.velocity.magnitude;
         }
         animator.SetBool("IsWalking",movement.x != 0);
         if (movement.x != 0)

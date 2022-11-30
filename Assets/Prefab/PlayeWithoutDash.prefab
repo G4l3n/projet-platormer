@@ -17,9 +17,8 @@ GameObject:
   - component: {fileID: 7724729350096915307}
   - component: {fileID: 7724729350096915306}
   - component: {fileID: 7724729350096915305}
-  - component: {fileID: 6260285936139059212}
   m_Layer: 0
-  m_Name: Player scene 1
+  m_Name: PlayeWithoutDash
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -316,27 +315,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aeb4ca7794e2b443a44ad4a88de9653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dash: {fileID: 6260285936139059212}
+  Dash: {fileID: 0}
   speed: 6
-  isReverse: 0
-  rb: {fileID: 0}
+  rb: {fileID: 7724729350096915286}
   NumberOfJumps: 2
   JumpForce: 9
   head: {fileID: 7724729350899926406}
---- !u!114 &6260285936139059212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7724729350096915309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58672fd6928849340a4efb8f82117ea5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tr: {fileID: 7724729350096915307}
-  isReverse: 0
 --- !u!1 &7724729350097811362
 GameObject:
   m_ObjectHideFlags: 0

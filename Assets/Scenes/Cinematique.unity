@@ -426,7 +426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7724729350096915309, guid: 86185c5d6b89a864d96bbe7f5c2d9638, type: 3}
       propertyPath: m_Name
-      value: Player scene 1
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7724729351652248951, guid: 86185c5d6b89a864d96bbe7f5c2d9638, type: 3}
       propertyPath: m_RootOrder

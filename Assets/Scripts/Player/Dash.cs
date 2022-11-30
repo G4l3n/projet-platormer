@@ -5,8 +5,9 @@ using UnityEngine.InputSystem;
 
 public class Dash : MonoBehaviour
 {
+    public Player player;
     private bool canDash = true;
-    private bool isDashing; 
+    public bool isDashing { get; private set; }
     private float dashingPower = 24f;
     private float dashingCooldown = 1f;
     private float dashingTime = 0.15f;
@@ -20,6 +21,7 @@ public class Dash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         rb = GetComponent<Rigidbody2D>();
         originalGravity = rb.gravityScale;
     }
@@ -37,7 +39,7 @@ public class Dash : MonoBehaviour
     {
         if (canDash)
         {
-            if (isReverse)
+            if (player.isReverse)
             {
                 dashingPower = -dashingPower;
                 StartCoroutine(Dashing());
