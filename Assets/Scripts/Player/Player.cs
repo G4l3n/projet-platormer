@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (!Dash.isDashing)
+        if (Dash == null || !Dash.isDashing)
         {
             rb.velocity = new Vector2(movement.x * speed, rb.velocity.y);
         }
