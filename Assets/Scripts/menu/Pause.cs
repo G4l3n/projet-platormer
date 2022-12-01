@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class echap : MonoBehaviour
+public class Pause : MonoBehaviour
 {
     public GameObject pauseMenu;
 
