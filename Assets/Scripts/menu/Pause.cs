@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-    public string sceneName = "";
     public GameObject pauseMenu;
     public bool isPause = false;
 
@@ -40,20 +39,6 @@ public class Pause : MonoBehaviour
         {
             DeactivatepauseMenu();
             isPause = false;   
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (!HaspauseMenu())
-        {
-            ActivatepauseMenu();
-            isPause = true;
-        }
-        else
-        {
-            DeactivatepauseMenu();
-            isPause = false;
         }
     }
 }
