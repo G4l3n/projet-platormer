@@ -13,6 +13,12 @@ public class CompteurDeMort : MonoBehaviour
         kill = gameObject.GetComponent<Kill>();
     }
 
-
+    public void IsDead()
+    {
+        if (kill.Death == true)
+        {
+            Debug.Log("IsDead");
+        }
+    }
 
 }
