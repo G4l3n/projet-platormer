@@ -8,7 +8,8 @@ public class LightInMenu : MonoBehaviour
 {
     public GameObject Light;
     Vector3 posMouse;
-    
+    public Camera Camera;
+
 
     public void Update()
     {
@@ -22,4 +23,12 @@ public class LightInMenu : MonoBehaviour
         pos.z = 0;
         transform.position = pos;
     }
+
+    public void DontDestroyOnLoad()
+    {
+        Camera = GetComponent<Camera>();
+    }
+
+
+
 }
