@@ -445,8 +445,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.56
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 729547736187661541, guid: 4b5f23affdfa2b5499a4ee649e736ce2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4b5f23affdfa2b5499a4ee649e736ce2, type: 3}
+--- !u!1 &417696821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 899435544028329025, guid: 4b5f23affdfa2b5499a4ee649e736ce2, type: 3}
+  m_PrefabInstance: {fileID: 417696820}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &417696822 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7360427820321159854, guid: 4b5f23affdfa2b5499a4ee649e736ce2, type: 3}
@@ -583,6 +589,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2850380864368465454, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 417696821}
     - target: {fileID: 2850380864368465455, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
       propertyPath: m_Name
       value: Player

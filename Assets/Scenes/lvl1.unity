@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 899435544028329029, guid: 4b5f23affdfa2b5499a4ee649e736ce2, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 899435544028329029, guid: 4b5f23affdfa2b5499a4ee649e736ce2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -250,7 +250,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.56
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 729547736187661541, guid: 4b5f23affdfa2b5499a4ee649e736ce2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4b5f23affdfa2b5499a4ee649e736ce2, type: 3}
 --- !u!114 &227153564 stripped
 MonoBehaviour:
