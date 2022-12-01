@@ -9,7 +9,7 @@ public class ScriptMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("quit");
+        //Debug.Log("quit");(
         Application.Quit();
     }
 
@@ -23,6 +23,10 @@ public class ScriptMenu : MonoBehaviour
         SceneManager.LoadScene("credits");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
     public void Update()
     {
         
