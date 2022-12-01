@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public bool isPause = false;
 
     private void Start()
     {
@@ -14,7 +16,7 @@ public class Pause : MonoBehaviour
 
     bool HaspauseMenu()
     {
-        return pauseMenu.activeSelf;
+        return pauseMenu.activeInHierarchy;
     }
     void ActivatepauseMenu()
     {
@@ -26,24 +28,21 @@ public class Pause : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
-
     public void Update()
+    {
+
+    }
+    private void OnPause(InputValue PauseValue)
     {
         if (!HaspauseMenu())
         {
-            if (Input.GetKeyUp(KeyCode.Escape))
-            {
-                ActivatepauseMenu();
-
-            }
-
+            ActivatepauseMenu();
+            isPause = true;
         }
         else
         {
-            if (Input.GetKeyUp(KeyCode.Escape))
-            {
-                DeactivatepauseMenu();
-            }
+            DeactivatepauseMenu();
+            isPause = false;   
         }
     }
 }

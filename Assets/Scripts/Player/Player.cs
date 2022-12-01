@@ -42,8 +42,8 @@ public class Player : MonoBehaviour
             isReverse = movement.x < 0;
         }
     }
-    public void OnJump(InputValue jumpValue){
-
+    public void OnJump(InputValue jumpValue)
+    {
         float innerValue = jumpValue.Get<float>();
         if (innerValue > 0 && rb != null && NumberOfJumps > 0){
             animator.SetBool("IsJumping", true);
@@ -53,13 +53,15 @@ public class Player : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision){
+    void OnCollisionEnter2D(Collision2D collision)
+    {
         if (collision.GetContact(0).normal.y > 0.9f){
             animator.SetBool("IsJumping", false);
             NumberOfJumps = MaxNumberOfJumps;
         }
     }
-    public void OnMove(InputValue moveValue){ 
+    public void OnMove(InputValue moveValue)
+    { 
         movement = moveValue.Get<Vector2>();
     }
 }

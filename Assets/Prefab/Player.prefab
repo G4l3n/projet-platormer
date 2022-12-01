@@ -523,6 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8645ab92e2e75c8429cbc3c82c4eb3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pause: {fileID: 0}
   player: {fileID: 8787163767201508239}
   myPlayer: {fileID: 8787163767201508235}
   rotationZ: 0
