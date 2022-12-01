@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Kill : MonoBehaviour
 {
-
+    public bool Death = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,8 @@ public class Kill : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            Death = true;
+            Debug.Log("died");
             Destroy(other.gameObject);
         } 
     }

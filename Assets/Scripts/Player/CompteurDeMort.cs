@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class CompteurDeMort : MonoBehaviour
 {
-    public Kill kill;
+    private Kill kill;
+    private Player player;
 
-
-
-    // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        kill = gameObject.GetComponent<Kill>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
 }
