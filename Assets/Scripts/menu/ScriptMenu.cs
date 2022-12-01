@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ScriptMenu : MonoBehaviour
 {
-    
+    public Camera Camera;
 
     public void QuitGame()
     {
-        //Debug.Log("quit");(
+        Debug.Log("quit");
         Application.Quit();
     }
 
@@ -27,6 +27,13 @@ public class ScriptMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void DontDestroyOnLoad()
+    {
+        Camera = GetComponent<Camera>();
+    }
+
+
     public void Update()
     {
         
