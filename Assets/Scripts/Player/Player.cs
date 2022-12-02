@@ -16,15 +16,16 @@ public class Player : MonoBehaviour
     Animator animator = null;
     Vector2 movement = Vector2.zero;
 
-    int MaxNumberOfJumps = 1;
-    public int NumberOfJumps = 0;
-    public float JumpForce = 9.0f;
+    public bool canJump = false;
+    public float jumpForce = 9.0f;
+    private float originalGravity;
 
     public GameObject head;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        originalGravity = rb.gravityScale;
         renderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
@@ -45,20 +46,34 @@ public class Player : MonoBehaviour
     public void OnJump(InputValue jumpValue)
     {
         float innerValue = jumpValue.Get<float>();
-        if (innerValue > 0 && rb != null && NumberOfJumps > 0){
+        if (innerValue > 0 && rb != null && canJump){
+            canJump = false;
             animator.SetBool("IsJumping", true);
             rb.velocity = new Vector2(rb.velocity.x, 0);
-            rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
-            NumberOfJumps--;
+            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.GetContact(0).normal.y > 0.9f){
-            animator.SetBool("IsJumping", false);
-            NumberOfJumps = MaxNumberOfJumps;
+        foreach(ContactPoint2D contact in collision.contacts)
+        {
+            if (contact.normal.y > 0.9f)
+            {
+                animator.SetBool("IsJumping", false);
+                canJump = true;
+            }
+            else if (contact.normal.x > 0.9f)
+            {
+                rb.gravityScale = 0.1f;
+                canJump = true;
+            }
         }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        rb.gravityScale = originalGravity;
     }
     public void OnMove(InputValue moveValue)
     { 

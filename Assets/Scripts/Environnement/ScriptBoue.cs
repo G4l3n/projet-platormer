@@ -28,7 +28,7 @@ public class ScriptBoue : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             dash.canDash = false;
-            player.JumpForce = 3f;
+            player.jumpForce = 3f;
             player.speed = 3f;
             //Debug.Log("in");
         }
@@ -40,7 +40,7 @@ public class ScriptBoue : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             dash.canDash = true;
-            player.JumpForce = 9f;
+            player.jumpForce = 9f;
             player.speed = 6f;
             //Debug.Log("out");
         }
