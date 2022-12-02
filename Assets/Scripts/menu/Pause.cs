@@ -20,14 +20,12 @@ public class Pause : MonoBehaviour
     }
     void ActivatepauseMenu()
     {
-        Debug.Log($"active");
         pauseMenu.SetActive(true);
         isPause = true;
         Time.timeScale = 0;
     }
     public void DeactivatepauseMenu()
     {
-        Debug.Log($"Desactive");
         pauseMenu.SetActive(false);
         isPause = false;
         Time.timeScale = 1;
