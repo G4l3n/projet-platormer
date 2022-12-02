@@ -9,12 +9,19 @@ public class FireflySpawner : MonoBehaviour
 
     void Start()
     {
-        FireflySpawn();
+        
     }
 
     void Update()
     {
         
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            FireflySpawn();
+        }
     }
 
     public void FireflySpawn()
