@@ -4,21 +4,11 @@ using UnityEngine;
 
 public class CompteurDeMort : MonoBehaviour
 {
-    private Kill kill;
-    private Player player;
+    public int NbreDeMort;
 
-    public void Start()
+    public void Update()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        kill = gameObject.GetComponent<Kill>();
-    }
-
-    public void IsDead()
-    {
-        if (kill.Death == true)
-        {
-            Debug.Log("IsDead");
-        }
+        
     }
 
 }
