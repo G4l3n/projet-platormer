@@ -727,8 +727,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750218d6b46332d4b94eb69a73b0bf52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monGUIText: {fileID: 0}
   NbreDeMort: 0
+  Text: {fileID: 0}
 --- !u!212 &1015632517
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1023,8 +1023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750218d6b46332d4b94eb69a73b0bf52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monGUIText: {fileID: 0}
   NbreDeMort: 0
+  Text: {fileID: 0}
 --- !u!1001 &1216091217
 PrefabInstance:
   m_ObjectHideFlags: 0

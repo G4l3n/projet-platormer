@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class Kill : MonoBehaviour
 {
 
     public int NbreDeMort;
+    public Canvas Text;
 
-    // Start is called before the first frame update
+    // http://www.unity3d-france.com/unity/phpBB3/viewtopic.php?t=8741 pour le nbre de mort
     void Start()
     {
-       
+        NbreDeMort = 0;
+
         if (PlayerPrefs.GetInt("NbreDeMort") != 0)
         {
             NbreDeMort = PlayerPrefs.GetInt("NbreDeMort");
@@ -34,8 +37,12 @@ public class Kill : MonoBehaviour
             NbreDeMort++;
             PlayerPrefs.SetInt("NbreDeMort", NbreDeMort);
             Debug.Log(NbreDeMort);
-            Destroy(other.gameObject);
-            SceneManager.LoadScene("Manon");
+            Death(other.gameObject);
         } 
+    }
+    public void Death(GameObject player)
+    {
+        Destroy(player);
+        SceneManager.LoadScene("Manon");
     }
 }
