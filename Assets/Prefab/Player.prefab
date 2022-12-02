@@ -388,7 +388,7 @@ MonoBehaviour:
   Dash: {fileID: 2850380864368465449}
   speed: 6
   rb: {fileID: 2850380864368465444}
-  NumberOfJumps: 2
+  NumberOfJumps: 1
   JumpForce: 9
   head: {fileID: 2850380864572601871}
 --- !u!114 &2850380864368465449
@@ -519,7 +519,7 @@ MonoBehaviour:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 20
-  m_PointLightOuterAngle: 60
+  m_PointLightOuterAngle: 80
   m_PointLightInnerRadius: 1
   m_PointLightOuterRadius: 12
   m_ShapeLightParametricSides: 5
