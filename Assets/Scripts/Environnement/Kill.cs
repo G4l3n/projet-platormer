@@ -4,22 +4,24 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
+using TMPro;
 
 public class Kill : MonoBehaviour
 {
 
     public int NbreDeMort;
-    public Canvas Text;
+    public TMP_Text text = null;
 
     // http://www.unity3d-france.com/unity/phpBB3/viewtopic.php?t=8741 pour le nbre de mort
     void Start()
     {
         NbreDeMort = 0;
+        
 
         if (PlayerPrefs.GetInt("NbreDeMort") != 0)
         {
             NbreDeMort = PlayerPrefs.GetInt("NbreDeMort");
-
+            text.text = NbreDeMort.ToString();
         }
     }
 
@@ -36,7 +38,6 @@ public class Kill : MonoBehaviour
         {
             NbreDeMort++;
             PlayerPrefs.SetInt("NbreDeMort", NbreDeMort);
-            Debug.Log(NbreDeMort);
             Death(other.gameObject);
         } 
     }
