@@ -7,20 +7,21 @@ using UnityEngine.PlayerLoop;
 public class LightInMenu : MonoBehaviour
 {
     public GameObject Light;
-    Vector3 posMouse;
 
 
     public void Update()
     {
         Light.transform.GetComponent<Camera>().enabled = true;
+
+        Vector3 pos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        pos.z = 0;
+        transform.position = pos;
+
     }
 
     public void FixedUpdate()
     {
-        posMouse = Input.mousePosition;
-        Vector3 pos = Camera.main.ScreenToWorldPoint(posMouse);
-        pos.z = 0;
-        transform.position = pos;
+      
     }
 
     

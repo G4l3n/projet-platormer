@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ScriptMenu : MonoBehaviour
 {
-    
+    public LightInMenu LightInMenu;
 
     public void QuitGame()
     {
@@ -26,6 +26,7 @@ public class ScriptMenu : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("Menu");
+        LightInMenu.Update();
     }
 
    
