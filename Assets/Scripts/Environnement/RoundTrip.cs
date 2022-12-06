@@ -7,22 +7,19 @@ public class RoundTrip : MonoBehaviour
 {
     public Vector2 direction;
     public Vector2 velocity;
-    public float speed = 2;
+    public float speed = 0f;
 
     public Vector2 startPos;
     void Start()
     {
-        startPos = transform.position;
+        startPos = transform.localPosition;
         direction = (transform.localRotation * Vector2.right).normalized;
         velocity = direction * speed;
     }
 
     void Update()
     {
-        if (transform.localPosition.x >= startPos.x + 1f || transform.localPosition.x <= startPos.x - 1f)
-        {
-            velocity = -velocity;
-        }
+        
     }
 
     private void FixedUpdate()
@@ -32,5 +29,11 @@ public class RoundTrip : MonoBehaviour
         pos += velocity * Time.fixedDeltaTime;
 
         transform.position = pos;
+
+        if (transform.localPosition.x > 0 && transform.localPosition.x > startPos.x + 0.5f
+            || transform.localPosition.x < 0 && transform.localPosition.x < startPos.x - 0.5f)
+        {
+            velocity = -velocity;
+        }
     }
 }

@@ -6,6 +6,9 @@ using UnityEngine;
 public class FireflySpawner : MonoBehaviour
 {
     public GameObject firefly;
+    public GameObject spawner;
+
+    private float dispawnTime = 15f;
 
     void Start()
     {
@@ -21,6 +24,7 @@ public class FireflySpawner : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             FireflySpawn();
+            StartCoroutine(Dispawn());
         }
     }
 
@@ -32,5 +36,12 @@ public class FireflySpawner : MonoBehaviour
         GameObject go3 = Instantiate(firefly, transform.position, Quaternion.Euler(0, 0, Random.Range(-180, 180)));
         GameObject go4 = Instantiate(firefly, transform.position, Quaternion.Euler(0, 0, Random.Range(-180, 180)));
         GameObject go5 = Instantiate(firefly, transform.position, Quaternion.Euler(0, 0, Random.Range(-180, 180)));
+    }
+
+    public IEnumerator Dispawn()
+    {
+        spawner.SetActive(false);
+        yield return new WaitForSeconds(dispawnTime);
+        spawner.SetActive(false);
     }
 }
