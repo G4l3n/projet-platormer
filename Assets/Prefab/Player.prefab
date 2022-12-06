@@ -94,9 +94,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3016322518147651604}
+  - component: {fileID: 2850380864368465446}
   - component: {fileID: 2850380864368465444}
   - component: {fileID: 2850380864368465447}
-  - component: {fileID: 2850380864368465446}
   - component: {fileID: 2850380864368465450}
   - component: {fileID: 2850380864368465451}
   - component: {fileID: 2850380864368465445}
@@ -126,43 +126,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &2850380864368465444
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2850380864368465455}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: adc595ce1d9ed584fb26ddc65c36dc9c, type: 2}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!70 &2850380864368465447
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2850380864368465455}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.011821866, y: 0.23552655}
-  m_Size: {x: 0.43299937, y: 1.4703062}
-  m_Direction: 0
 --- !u!212 &2850380864368465446
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -215,6 +178,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &2850380864368465444
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2850380864368465455}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 2
+  m_Material: {fileID: 6200000, guid: adc595ce1d9ed584fb26ddc65c36dc9c, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!70 &2850380864368465447
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2850380864368465455}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.011821866, y: 0.23552655}
+  m_Size: {x: 0.43299937, y: 1.4703062}
+  m_Direction: 0
 --- !u!96 &2850380864368465450
 TrailRenderer:
   serializedVersion: 2
@@ -388,8 +388,8 @@ MonoBehaviour:
   Dash: {fileID: 2850380864368465449}
   speed: 6
   rb: {fileID: 2850380864368465444}
-  NumberOfJumps: 1
-  JumpForce: 9
+  canJump: 0
+  jumpForce: 9
   head: {fileID: 2850380864572601871}
 --- !u!114 &2850380864368465449
 MonoBehaviour:
