@@ -773,6 +773,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ScriptMenu, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 899435543730168791, guid: 4b5f23affdfa2b5499a4ee649e736ce2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 899435543730168791, guid: 4b5f23affdfa2b5499a4ee649e736ce2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 899435543865645420, guid: 4b5f23affdfa2b5499a4ee649e736ce2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 899435543865645420, guid: 4b5f23affdfa2b5499a4ee649e736ce2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 899435543865645420, guid: 4b5f23affdfa2b5499a4ee649e736ce2, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 899435544028329025, guid: 4b5f23affdfa2b5499a4ee649e736ce2, type: 3}
       propertyPath: m_Name
       value: popup pitie
