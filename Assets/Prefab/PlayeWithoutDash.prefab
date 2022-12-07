@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: -807544309
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 614283540, guid: 2d77e11e4a1d9b64184535ce3067dbab, type: 3}
+  m_Sprite: {fileID: 928247034, guid: 237e543afd1a8644f86170de55b94037, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -300,9 +300,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dash: {fileID: 0}
   speed: 6
+  dontMoveTime: 0.5
   rb: {fileID: 7724729350096915286}
-  NumberOfJumps: 2
-  JumpForce: 9
+  canJump: 0
+  jumpForce: 9
+  jumpForceBack: 4.5
   head: {fileID: 7724729350899926406}
 --- !u!1 &7724729350097811362
 GameObject:
@@ -349,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8645ab92e2e75c8429cbc3c82c4eb3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pause: {fileID: 0}
   player: {fileID: 7724729350096915305}
   myPlayer: {fileID: 7724729350096915309}
   rotationZ: 0
