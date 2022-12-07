@@ -11,12 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cinematique.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/lvl0.unity
+    guid: bc7e3c03979c913408eb8391ee0cd985
   - enabled: 0
     path: Assets/Scenes/Ethan.unity
     guid: c22b1058ef526ae4a975f0aa873239be
   - enabled: 0
     path: Assets/Scenes/test.unity
     guid: d94bff0296e1c6e4db1778f655c73b85
+  - enabled: 1
+    path: Assets/Scenes/Cinematique.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/lvl1.unity
     guid: 631a9dddf27dcf844a8f503aa81c76f7
@@ -41,5 +47,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/lvl8.unity
     guid: efbd3ef18d1a490499c1138c345acf86
+  - enabled: 1
+    path: Assets/Scenes/credits.unity
+    guid: e74ec3993d3e23f458edd9f416242cbf
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: d84f07836a1932249ab923676e0efc7c, type: 2}
