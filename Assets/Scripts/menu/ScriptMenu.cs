@@ -21,14 +21,14 @@ public class ScriptMenu : MonoBehaviour
     public void Credits()
     {
         SceneManager.LoadScene("credits");
+
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene("Menu");
-        LightInMenu.Update();
     }
-
+   
    
 
 

@@ -24,6 +24,7 @@ public class Pause : MonoBehaviour
         isPause = true;
         Time.timeScale = 0;
     }
+
     public void DeactivatepauseMenu()
     {
         pauseMenu.SetActive(false);
