@@ -43,11 +43,15 @@ public class Player : MonoBehaviour
             isReverse = movement.x < 0;
         }
     }
+
+    private void FixedUpdate()
+    {
+        canJump = false;
+    }
     public void OnJump(InputValue jumpValue)
     {
         float innerValue = jumpValue.Get<float>();
         if (innerValue > 0 && rb != null && canJump){
-            canJump = false;
             animator.SetBool("IsJumping", true);
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
@@ -63,8 +67,10 @@ public class Player : MonoBehaviour
                 animator.SetBool("IsJumping", false);
                 canJump = true;
             }
-            else if (contact.normal.x > 0.9f)
+            else if (contact.normal.x > 0.9f && collision.gameObject.tag == "Grabbable" 
+                     || contact.normal.x < 0.9f && collision.gameObject.tag == "Grabbable")
             {
+                animator.SetBool("IsGrabing", true);
                 rb.gravityScale = 0.1f;
                 canJump = true;
             }
@@ -74,6 +80,7 @@ public class Player : MonoBehaviour
     void OnCollisionExit2D(Collision2D collision)
     {
         rb.gravityScale = originalGravity;
+        animator.SetBool("IsGrabing", false);
     }
     public void OnMove(InputValue moveValue)
     { 

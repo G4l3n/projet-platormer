@@ -6,9 +6,11 @@ using UnityEngine;
 public class FireflySpawner : MonoBehaviour
 {
     public GameObject firefly;
-    public GameObject spawner;
 
-    private float dispawnTime = 15f;
+    private float dispawnTime = 5f;
+
+    private bool canSpawn = true;
+
 
     void Start()
     {
@@ -21,10 +23,12 @@ public class FireflySpawner : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (canSpawn)
         {
-            FireflySpawn();
-            StartCoroutine(Dispawn());
+            if (other.gameObject.tag == "Player")
+            {
+                FireflySpawn();
+            }
         }
     }
 
@@ -36,12 +40,21 @@ public class FireflySpawner : MonoBehaviour
         GameObject go3 = Instantiate(firefly, transform.position, Quaternion.Euler(0, 0, Random.Range(-180, 180)));
         GameObject go4 = Instantiate(firefly, transform.position, Quaternion.Euler(0, 0, Random.Range(-180, 180)));
         GameObject go5 = Instantiate(firefly, transform.position, Quaternion.Euler(0, 0, Random.Range(-180, 180)));
+        StartCoroutine(Dispawn());
     }
 
     public IEnumerator Dispawn()
     {
-        spawner.SetActive(false);
+        canSpawn = false;
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(false);
+        }
         yield return new WaitForSeconds(dispawnTime);
-        spawner.SetActive(false);
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive(true);
+        }
+        canSpawn = true;
     }
 }
