@@ -210,6 +210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirefliesSpwaner
       objectReference: {fileID: 0}
+    - target: {fileID: 8533595361895580628, guid: 2a62d02608c6ca64da1ba77db719256e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8533595361997444733, guid: 2a62d02608c6ca64da1ba77db719256e, type: 3}
       propertyPath: m_Intensity
       value: 2
@@ -6750,9 +6754,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2850380864368465444, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850380864368465444, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850380864368465448, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
+      propertyPath: rayLenght
+      value: 0.65
+      objectReference: {fileID: 0}
     - target: {fileID: 2850380864368465448, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
       propertyPath: dontMoveTime
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850380864368465448, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
+      propertyPath: wallDistance
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850380864368465448, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
+      propertyPath: wallSlideSpeed
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850380864368465448, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2850380864368465454, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
       propertyPath: m_Enabled
