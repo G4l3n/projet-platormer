@@ -11,14 +11,10 @@ public class Kill : MonoBehaviour
 
     public int NbreDeMort;
     public TMP_Text text = null;
-    /*public Animator animator;*/
 
     // http://www.unity3d-france.com/unity/phpBB3/viewtopic.php?t=8741 pour le nbre de mort
     void Start()
     {
-
-        /*animator = GetComponent<Animator>();*/
-
 
         NbreDeMort = 0;
         
@@ -49,11 +45,6 @@ public class Kill : MonoBehaviour
     public void Death(GameObject player)
     {
         Destroy(player);
-
-
-       /* animator.SetBool("fadein", true);*/
-
-        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
