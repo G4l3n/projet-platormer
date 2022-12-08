@@ -15,6 +15,7 @@ public class BugMovement : MonoBehaviour
 
     void Start()
     {
+        GetComponent<AudioSource>().Play();
         startPos = transform.position;
         renderer = GetComponent<SpriteRenderer>();
 

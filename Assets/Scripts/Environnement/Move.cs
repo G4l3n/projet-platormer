@@ -8,7 +8,7 @@ public class Move : MonoBehaviour
 
     void Update()
     {
-        if (Time.timeSinceLevelLoad > 8f)
+        if (Time.timeSinceLevelLoad > 7.5f)
             transform.Translate(Vector2.left * Speed * Time.deltaTime);
     }
 }
