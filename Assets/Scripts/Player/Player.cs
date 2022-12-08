@@ -35,6 +35,9 @@ public class Player : MonoBehaviour
     public bool isWallSliding = false;
     RaycastHit2D wallCheckHit;
     private float jumpTime;
+    public float jumpForceBack = 4.5f;
+    public float dontMoveTime = 0f;
+    public bool isWallJumping = false;
 
     [Header("Sprite")]
     new SpriteRenderer renderer = null;
@@ -51,7 +54,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if ((Dash == null || !Dash.isDashing))
+        if ((Dash == null || !Dash.isDashing) && !isWallJumping && !isWallSliding)
         {
             rb.velocity = new Vector2(movement.x * speed, rb.velocity.y);
         }
@@ -65,25 +68,28 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Jump
         canJump = Physics2D.Raycast(transform.position, -transform.up.normalized, rayLenght, groundLayer).collider != null;
         isGrounded = canJump;
         animator.SetBool("IsJumping", !canJump);
+        isMoving = movement.x > 0.25f || movement.x < -0.25f;
 
-        // Wall Jump
+        // Wall Jump https://www.youtube.com/watch?v=adT3vSD-74Q&ab_channel=MuddyWolf
 
         if (!isReverse)
         {
             wallCheckHit = Physics2D.Raycast(transform.position, new Vector2(wallDistance, 0), wallDistance, groundLayer);
-            Debug.DrawRay(transform.position, new Vector2(wallDistance, 0), Color.green);
+            //Debug.DrawRay(transform.position, new Vector2(wallDistance, 0), Color.green);
         }
         else
         {
             wallCheckHit = Physics2D.Raycast(transform.position, new Vector2(-wallDistance, 0), wallDistance, groundLayer);
-            Debug.DrawRay(transform.position, new Vector2(-wallDistance, 0), Color.green);
+            //Debug.DrawRay(transform.position, new Vector2(-wallDistance, 0), Color.green);
         }
 
-        if (wallCheckHit && !isGrounded && isMoving)
+        if (wallCheckHit && !isGrounded)
         {
+            canJump = true;
             isWallSliding = true;
             jumpTime = Time.time + wallJumpTime;
         }
@@ -100,17 +106,20 @@ public class Player : MonoBehaviour
     public void OnJump(InputValue jumpValue)
     {
         float innerValue = jumpValue.Get<float>();
-        if (innerValue > 0 && rb != null && canJump)
+        if (innerValue > 0 && rb != null && canJump && isGrounded && !isWallSliding)
         {
             isGrounded = false;
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
+        else if (innerValue > 0 && rb != null && canJump && isWallSliding && !isGrounded)
+        {
+            StartCoroutine(DontMove());
+        }
     }
     public void OnMove(InputValue moveValue)
     {
         movement = moveValue.Get<Vector2>();
-        isMoving = true;
         //if (movement == Vector2.zero)
         //{
         //    Debug.Log("stop");
@@ -122,5 +131,15 @@ public class Player : MonoBehaviour
         //    GetComponent<AudioSource>().Play();
         //}
         
+    }
+
+    public IEnumerator DontMove()
+    {
+        isWallJumping = true;
+        isWallSliding = false;
+        rb.velocity = new Vector2(rb.velocity.x, 0);
+        rb.AddForce(new Vector2(-jumpForceBack, jumpForce), ForceMode2D.Impulse);
+        yield return new WaitForSeconds(dontMoveTime);
+        isWallJumping = false;
     }
 }
