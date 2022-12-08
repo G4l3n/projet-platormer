@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 2850380864368465448}
   - component: {fileID: 2850380864368465449}
   - component: {fileID: 2850380864368465454}
+  - component: {fileID: 3961224731243672547}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -386,11 +387,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 2850380864572601871}
+  isMoving: 0
   speed: 6
   rb: {fileID: 2850380864368465444}
   canJump: 0
   jumpForce: 10
+  rayLenght: 1
   Dash: {fileID: 2850380864368465449}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  isGrounded: 0
+  wallJumpTime: 0.2
+  wallSlideSpeed: 0.3
+  wallDistance: 0.5
+  isWallSliding: 0
 --- !u!114 &2850380864368465449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,6 +432,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1003586175727043377, guid: cfeccd449021c1549aa27d5e0f166603, type: 3}
   isPause: 0
+--- !u!81 &3961224731243672547
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2850380864368465455}
+  m_Enabled: 1
 --- !u!1 &2850380864526039047
 GameObject:
   m_ObjectHideFlags: 0

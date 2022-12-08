@@ -624,11 +624,23 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8862329282582274836, guid: 2f80ad88f75de504aa5d4dadb483cb44, type: 3}
+      propertyPath: m_Pitch
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862329282582274836, guid: 2f80ad88f75de504aa5d4dadb483cb44, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862329282582274836, guid: 2f80ad88f75de504aa5d4dadb483cb44, type: 3}
       propertyPath: DopplerLevel
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8862329282582274836, guid: 2f80ad88f75de504aa5d4dadb483cb44, type: 3}
       propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862329282582274836, guid: 2f80ad88f75de504aa5d4dadb483cb44, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -1869,6 +1881,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!81 &1766052386
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560167173}
+  m_Enabled: 1
 --- !u!1 &1841274672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,7 +2056,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1909730149}
   - component: {fileID: 1909730148}
-  - component: {fileID: 1909730147}
   - component: {fileID: 1909730150}
   - component: {fileID: 1909730151}
   m_Layer: 0
@@ -2046,14 +2065,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1909730147
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1909730146}
-  m_Enabled: 1
 --- !u!20 &1909730148
 Camera:
   m_ObjectHideFlags: 0
