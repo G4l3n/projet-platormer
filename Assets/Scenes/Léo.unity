@@ -6772,7 +6772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2850380864368465448, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
       propertyPath: wallDistance
-      value: 0.23
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 2850380864368465448, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
       propertyPath: wallSlideSpeed

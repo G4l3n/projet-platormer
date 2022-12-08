@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7724729350096915309}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.97, y: -0.935, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -104,8 +104,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.011821866, y: 0.23871917}
-  m_Size: {x: 0.43299937, y: 1.4766914}
+  m_Offset: {x: 0, y: 0.2418011}
+  m_Size: {x: 0.5, y: 1.48}
   m_Direction: 0
 --- !u!50 &7724729350096915286
 Rigidbody2D:
@@ -298,14 +298,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aeb4ca7794e2b443a44ad4a88de9653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dash: {fileID: 0}
+  head: {fileID: 7724729350899926406}
+  isMoving: 0
   speed: 6
-  dontMoveTime: 0.5
   rb: {fileID: 7724729350096915286}
   canJump: 0
   jumpForce: 9
-  jumpForceBack: 4.5
-  head: {fileID: 7724729350899926406}
+  rayLenght: 1
+  Dash: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  isGrounded: 0
+  wallJumpTime: 0.2
+  wallSlideSpeed: 0.3
+  wallDistance: 0.5
+  isWallSliding: 0
 --- !u!1 &7724729350097811362
 GameObject:
   m_ObjectHideFlags: 0
