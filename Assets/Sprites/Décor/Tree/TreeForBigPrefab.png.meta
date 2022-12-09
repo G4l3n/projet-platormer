@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2a378067661ee8d41880032e144a96c3
+guid: 9b7802e9f9ba777418f5eaee601534c4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _stringstar_fields 1_0
+      name: TreeForPrefab_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,20 +113,20 @@ TextureImporter:
         width: 128
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29863fe8979966b48b3ab3b2c589d234
-      internalID: 1891005535
+      spriteID: ae9cfada6cc928b4ea83d02f5c162af6
+      internalID: -1847031049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _stringstar_fields 1_1
+      name: TreeForPrefab_1
       rect:
         serializedVersion: 2
         x: 128
@@ -134,20 +134,20 @@ TextureImporter:
         width: 128
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2e2da1b9582eac4a9d96968e69aa1be
-      internalID: -934201094
+      spriteID: fac21b95fd97dd84782577fb2260623a
+      internalID: -1936752083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _stringstar_fields 1_2
+      name: TreeForPrefab_2
       rect:
         serializedVersion: 2
         x: 256
@@ -155,20 +155,20 @@ TextureImporter:
         width: 128
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19f192ce2f6cd4742a5c8d40667717d0
-      internalID: 871139243
+      spriteID: 6fce93e8d9efa87458f574169af463aa
+      internalID: 1342378547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _stringstar_fields 1_3
+      name: TreeForPrefab_3
       rect:
         serializedVersion: 2
         x: 384
@@ -176,20 +176,20 @@ TextureImporter:
         width: 128
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88326e78172211145b4eec933c764aa7
-      internalID: 1630419955
+      spriteID: 0798fa8d0c539fa46a16e4b7cc1b0b55
+      internalID: 498808530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _stringstar_fields 1_4
+      name: TreeForPrefab_4
       rect:
         serializedVersion: 2
         x: 256
@@ -197,20 +197,20 @@ TextureImporter:
         width: 128
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c26d0a18b07fbab41837adeee4d5e4e0
-      internalID: 481351436
+      spriteID: 8d51e6c53ad5e724ab4b22107d384fe2
+      internalID: 82408758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _stringstar_fields 1_5
+      name: TreeForPrefab_5
       rect:
         serializedVersion: 2
         x: 384
@@ -218,14 +218,14 @@ TextureImporter:
         width: 128
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c438032375dff14e8ac9d7aa953a735
-      internalID: 2142819953
+      spriteID: 1242e888a09cc874cb7d4771d3dd996f
+      internalID: -316733274
       vertices: []
       indices: 
       edges: []
@@ -243,12 +243,12 @@ TextureImporter:
     - texture: {fileID: 2800000, guid: 2e1640f61d390cb499fbc362ad55b80e, type: 3}
       name: _NormalMap
     nameFileIdTable:
-      _stringstar_fields 1_0: 1891005535
-      _stringstar_fields 1_2: 871139243
-      _stringstar_fields 1_4: 481351436
-      _stringstar_fields 1_3: 1630419955
-      _stringstar_fields 1_5: 2142819953
-      _stringstar_fields 1_1: -934201094
+      TreeForPrefab_2: 1342378547
+      TreeForPrefab_5: -316733274
+      TreeForPrefab_1: -1936752083
+      TreeForPrefab_0: -1847031049
+      TreeForPrefab_4: 82408758
+      TreeForPrefab_3: 498808530
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
