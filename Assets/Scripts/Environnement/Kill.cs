@@ -8,7 +8,6 @@ using TMPro;
 
 public class Kill : MonoBehaviour
 {
-
     public int NbreDeMort;
     public TMP_Text text = null;
 
