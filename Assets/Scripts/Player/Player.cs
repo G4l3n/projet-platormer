@@ -54,27 +54,43 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if ((Dash == null || !Dash.isDashing) && !isWallJumping && !isWallSliding)
-        {
-            rb.velocity = new Vector2(movement.x * speed, rb.velocity.y);
-        }
-        animator.SetBool("IsWalking",movement.x != 0);
-        if (movement.x != 0)
-        {
-            renderer.flipX = movement.x < 0;
-            isReverse = movement.x < 0;;
-        }
+        
     }
 
     private void FixedUpdate()
     {
+        // Movement
+        if ((Dash == null || !Dash.isDashing) && !isWallJumping && !isWallSliding)
+        {
+            rb.velocity = new Vector2(movement.x * speed, rb.velocity.y);
+        }
+
+        isMoving = movement.x > 0.25f || movement.x < -0.25f;
+        animator.SetBool("IsWalking", isMoving);
+        if (isMoving)
+        {
+            renderer.flipX = movement.x < 0;
+            isReverse = movement.x < 0;
+        }
+
+        // Dash
+        if (!isWallSliding || !isWallJumping)
+        {
+            Dash.canDash = true;
+        }
+
         // Jump
         canJump = Physics2D.Raycast(transform.position, -transform.up.normalized, rayLenght, groundLayer).collider != null;
         isGrounded = canJump;
         animator.SetBool("IsJumping", !canJump);
-        isMoving = movement.x > 0.25f || movement.x < -0.25f;
 
         // Wall Jump https://www.youtube.com/watch?v=adT3vSD-74Q&ab_channel=MuddyWolf
+
+        jumpForceBack = 4.5f;
+        if (!isReverse)
+        {
+            jumpForceBack = -jumpForceBack;
+        }
 
         if (!isReverse)
         {
@@ -98,8 +114,9 @@ public class Player : MonoBehaviour
             isWallSliding = false;
         }
 
-        if (isWallSliding)
+        if (isWallSliding && isMoving)
         {
+            Dash.canDash = false;
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, wallSlideSpeed, float.MaxValue));
         }
     }
@@ -135,11 +152,13 @@ public class Player : MonoBehaviour
 
     public IEnumerator DontMove()
     {
+        Dash.canDash = false;
         isWallJumping = true;
         isWallSliding = false;
         rb.velocity = new Vector2(rb.velocity.x, 0);
-        rb.AddForce(new Vector2(-jumpForceBack, jumpForce), ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(jumpForceBack, jumpForce), ForceMode2D.Impulse);
         yield return new WaitForSeconds(dontMoveTime);
         isWallJumping = false;
+        Dash.canDash = true;
     }
 }
