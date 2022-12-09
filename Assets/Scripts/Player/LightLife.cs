@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class LightLife : MonoBehaviour
@@ -12,6 +14,7 @@ public class LightLife : MonoBehaviour
 
     public TMP_Text text;
 
+    public Light2D Light2D;
 
     //https://www.bing.com/videos/search?q=coroutine+timer+unity&qpvt=coroutine+timer+unity&view=detail&mid=3FC186B643C68BA5A6063FC186B643C68BA5A606&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3Dcoroutine%2Btimer%2Bunity%26qpvt%3Dcoroutine%2Btimer%2Bunity%26FORM%3DVDRE
     //pour timer
@@ -19,6 +22,22 @@ public class LightLife : MonoBehaviour
     public void Start()
     {
         StartTime();
+
+    }
+
+    public void Update()
+    {
+        Light();
+    }
+
+
+
+
+
+    public void Light()
+    {
+        Light2D.intensity = minutes;
+
 
     }
 
