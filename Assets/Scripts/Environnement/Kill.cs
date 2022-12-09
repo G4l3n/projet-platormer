@@ -36,14 +36,14 @@ public class Kill : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            NbreDeMort++;
-            PlayerPrefs.SetInt("NbreDeMort", NbreDeMort);
             Death(other.gameObject);
         } 
     }
-    public void Death(GameObject player)
+    public void Death(GameObject objectToKill)
     {
-        Destroy(player);
+        NbreDeMort++;
+        PlayerPrefs.SetInt("NbreDeMort", NbreDeMort);
+        Destroy(objectToKill);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

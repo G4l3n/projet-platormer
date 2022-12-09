@@ -10,13 +10,13 @@ using UnityEngine.UI;
 
 public class LightLife : MonoBehaviour
 {
-    public float timer = 120f;
+    public float timer;
     public float decrement;
     public float intensite;
 
     public Light2D Light2D;
 
-    Kill Kill;
+    public Kill kill;
     
     public GameObject player;
 
@@ -34,7 +34,7 @@ public class LightLife : MonoBehaviour
     {
         if(Light2D.intensity <= 0f)
         {
-            Kill.Death(player);
+            kill.Death(player);
         }
     }
 
