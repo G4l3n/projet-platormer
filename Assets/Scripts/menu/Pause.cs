@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
+    [Header("Pause")]
     public GameObject pauseMenu;
     public bool isPause = false;
 
@@ -31,7 +32,7 @@ public class Pause : MonoBehaviour
         isPause = false;
         Time.timeScale = 1;
     }
-    private void OnPause(InputValue PauseValue)
+    private void OnPause(InputValue pauseValue)
     {
         if (!HaspauseMenu())
         {

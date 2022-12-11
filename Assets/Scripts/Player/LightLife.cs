@@ -15,8 +15,6 @@ public class LightLife : MonoBehaviour
     public float intensite;
 
     public Light2D Light2D;
-
-    public Kill kill;
     
     public GameObject player;
 
@@ -34,7 +32,7 @@ public class LightLife : MonoBehaviour
     {
         if(Light2D.intensity <= 0f)
         {
-            kill.Death(player);
+            GameManager.Instance.KillPlayer(player);
         }
     }
 

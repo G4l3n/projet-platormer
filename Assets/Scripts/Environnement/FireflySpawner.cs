@@ -5,22 +5,13 @@ using UnityEngine;
 
 public class FireflySpawner : MonoBehaviour
 {
-    public GameObject firefly;
-
+    [Header("Spawner")]
+    private bool canSpawn = true;
     private float dispawnTime = 5f;
 
-    private bool canSpawn = true;
+    [Header("Object to spawn")]
+    public GameObject firefly;
 
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (canSpawn)
@@ -32,6 +23,7 @@ public class FireflySpawner : MonoBehaviour
         }
     }
 
+    //Spawn 6 fireflies in any direction
     public void FireflySpawn()
     {
         GameObject go = Instantiate(firefly, transform.position, Quaternion.Euler(0, 0, Random.Range(-180, 180)));
@@ -43,6 +35,7 @@ public class FireflySpawner : MonoBehaviour
         StartCoroutine(Dispawn());
     }
 
+    //Dispawn during a definite time
     public IEnumerator Dispawn()
     {
         canSpawn = false;
