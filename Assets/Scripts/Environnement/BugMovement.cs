@@ -51,13 +51,12 @@ public class BugMovement : MonoBehaviour
     {
         foreach (ContactPoint2D contact in collision.contacts)
         {
-            if (collision.gameObject.tag == "Player")
+            if (collision.gameObject.CompareTag("Player"))
             {
                 //If the player is hit by the bug, we kill the player
                 if (contact.normal.x != 0 && contact.normal.y == 0)
                 {
-                    Debug.Log("kill");
-                    //GameManager.Instance.KillPlayer(collision.gameObject);
+                    GameManager.Instance.KillPlayer(player.gameObject);
                 }
                 
                 //If the player jump on the bug, he bounce on him and the bug is killed

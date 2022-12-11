@@ -9,17 +9,18 @@ using UnityEngine.Rendering.Universal;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance = null;
-    public static GameManager Instance { get; private set; }
+    private GameManager() { }
+    public static GameManager Instance => _instance;
 
     [Header("Player")]
-    public GameObject player;
+    private Player player;
 
     [Header("Kill")]
-    public int NbreDeMort;
-    public TMP_Text text = null;
+    public int DeathNumber;
+    public TMP_Text DeathCount = null;
 
     [Header("Light")]
-    public Light2D Light2D;
+    private Light2D playerLight;
     public float timer;
     public float decrement;
     public float intensity;
@@ -38,19 +39,20 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        //http://www.unity3d-france.com/unity/phpBB3/viewtopic.php?t=8741
+        //Player
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        playerLight = GameObject.FindGameObjectWithTag("PlayerLight").GetComponent<Light2D>();
+
         //Death count
-        NbreDeMort = 0;
-
-
-        if (PlayerPrefs.GetInt("NbreDeMort") != 0)
+        //http://www.unity3d-france.com/unity/phpBB3/viewtopic.php?t=8741
+        if (PlayerPrefs.GetInt("DeathNumber") != 0)
         {
-            NbreDeMort = PlayerPrefs.GetInt("NbreDeMort");
-            text.text = NbreDeMort.ToString();
+            DeathNumber = PlayerPrefs.GetInt("DeathNumber");
+            DeathCount.text = DeathNumber.ToString();
         }
 
         //Light intensity
-        intensity = Light2D.intensity;
+        intensity = playerLight.intensity;
         Pourcentage(timer, intensity);
         if (decrement != 0)
         {
@@ -59,29 +61,33 @@ public class GameManager : MonoBehaviour
     }
     public void FixedUpdate()
     {
-        if (Light2D.intensity <= 0f)
+        if (playerLight.intensity <= 0f)
         {
-            KillPlayer(player);
+            KillPlayer(player.gameObject);
         }
     }
 
-    public void KillPlayer(GameObject objectToKill)
+    public void KillPlayer(GameObject player)
     {
-        NbreDeMort++;
-        PlayerPrefs.SetInt("NbreDeMort", NbreDeMort);
-        Destroy(objectToKill);
+        KillCount();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    public void Pourcentage(float timer, float intensite)
+
+    public void KillCount()
+    {
+        DeathNumber++;
+        PlayerPrefs.SetInt("DeathNumber", DeathNumber);
+    }
+    private void Pourcentage(float timer, float intensite)
     {
         decrement = (intensite / timer);
     }
     private IEnumerator Intensity()
     {
         yield return new WaitForSeconds(1f);
-        Light2D.intensity -= decrement;
+        playerLight.intensity -= decrement;
 
-        if (Light2D.intensity > 0)
+        if (playerLight.intensity > 0)
         {
             StartCoroutine(Intensity());
         }

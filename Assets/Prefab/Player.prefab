@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 2850380864526039041}
   m_Layer: 0
   m_Name: Light
-  m_TagString: Untagged
+  m_TagString: PlayerLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -686,10 +686,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8645ab92e2e75c8429cbc3c82c4eb3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pause: {fileID: 2850380864368465454}
   player: {fileID: 2850380864368465448}
   myPlayer: {fileID: 2850380864368465455}
   rotationZ: 0
+  Pause: {fileID: 2850380864368465454}
 --- !u!1 &5721186242413541995
 GameObject:
   m_ObjectHideFlags: 0

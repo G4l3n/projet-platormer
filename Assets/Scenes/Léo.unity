@@ -4920,7 +4920,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2850380864368465454, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
   m_PrefabInstance: {fileID: 1077665991}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005895070}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 87c78b98ca5523342a02d29ef73a8c10, type: 3}
@@ -7076,12 +7076,12 @@ GameObject:
   - component: {fileID: 1725140362}
   - component: {fileID: 1725140361}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: DeathCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1725140361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7192,7 +7192,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8347,17 +8347,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1738348348 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2850380864526039041, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
-  m_PrefabInstance: {fileID: 1077665991}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1886473406
 GameObject:
   m_ObjectHideFlags: 0
@@ -12174,7 +12163,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 0bdaddcf
@@ -12251,11 +12240,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2005895070 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2850380864368465455, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
-  m_PrefabInstance: {fileID: 1077665991}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2075785710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12398,7 +12382,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2105988778}
-  - component: {fileID: 2105988777}
   - component: {fileID: 2105988779}
   m_Layer: 0
   m_Name: GameManager
@@ -12407,23 +12390,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2105988777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105988776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8fd083ce40ae3f459d4455bff1d3bd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 10
-  decrement: 0
-  intensite: 0
-  Light2D: {fileID: 1738348348}
-  player: {fileID: 2005895070}
 --- !u!4 &2105988778
 Transform:
   m_ObjectHideFlags: 0
@@ -12437,7 +12403,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2105988779
 MonoBehaviour:
@@ -12451,8 +12417,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36f18a5886f29c4f89d2a13b6deecc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NbreDeMort: 0
-  text: {fileID: 1725140361}
+  DeathNumber: 0
+  DeathCount: {fileID: 1725140361}
+  timer: 10
+  decrement: 0
+  intensity: 0
 --- !u!1 &2141034189
 GameObject:
   m_ObjectHideFlags: 0
