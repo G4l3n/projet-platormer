@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
 
     [Header("Wall Jump")]
     public LayerMask groundLayer;
+    public LayerMask stalactiteLayer;
     public bool isGrounded = false;
     public float wallJumpTime = 0.2f;
     public float wallSlideSpeed = 0.3f;
@@ -80,7 +81,8 @@ public class Player : MonoBehaviour
         }
 
         // Jump
-        canJump = Physics2D.Raycast(transform.position, -transform.up.normalized, rayLenght, groundLayer).collider != null;
+        canJump = Physics2D.Raycast(transform.position, -transform.up.normalized, rayLenght, groundLayer).collider != null 
+               || Physics2D.Raycast(transform.position, -transform.up.normalized, rayLenght, stalactiteLayer).collider != null;
         isGrounded = canJump;
         animator.SetBool("IsJumping", !canJump);
 

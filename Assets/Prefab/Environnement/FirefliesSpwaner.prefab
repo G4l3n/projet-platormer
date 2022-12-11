@@ -692,7 +692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2139f54194bdc2e438fbe05bc1a9ecf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firefly: {fileID: 7430109770582280887, guid: 0db9b6dfd75efd24783bcc3e79b6ce98, type: 3}
+  firefly: {fileID: 2807952269781680525, guid: f691d221e23e77f4d976f3178c26d25e, type: 3}
 --- !u!61 &8533595360809849136
 BoxCollider2D:
   m_ObjectHideFlags: 0

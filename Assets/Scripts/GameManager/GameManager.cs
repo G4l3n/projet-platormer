@@ -8,6 +8,7 @@ using UnityEngine.Rendering.Universal;
 // Merci à Youen pour l'aide
 public class GameManager : MonoBehaviour
 {
+    //Singleton
     private static GameManager _instance = null;
     private GameManager() { }
     public static GameManager Instance => _instance;
