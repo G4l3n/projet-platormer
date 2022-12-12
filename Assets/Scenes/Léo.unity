@@ -1258,63 +1258,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1001 &461606368
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 398675255239502362, guid: f93f29984592dfe4192af2529431305a, type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: f93f29984592dfe4192af2529431305a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: f93f29984592dfe4192af2529431305a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: f93f29984592dfe4192af2529431305a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: f93f29984592dfe4192af2529431305a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: f93f29984592dfe4192af2529431305a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: f93f29984592dfe4192af2529431305a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: f93f29984592dfe4192af2529431305a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: f93f29984592dfe4192af2529431305a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: f93f29984592dfe4192af2529431305a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: f93f29984592dfe4192af2529431305a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5407672407231045233, guid: f93f29984592dfe4192af2529431305a, type: 3}
-      propertyPath: m_Name
-      value: MediumStalagmite
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f93f29984592dfe4192af2529431305a, type: 3}
 --- !u!1 &484871276
 GameObject:
   m_ObjectHideFlags: 0
@@ -4928,63 +4871,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1001 &826423229
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 398675255239502362, guid: fb2d4c7a43812e44085ff4fa3ccffcb1, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: fb2d4c7a43812e44085ff4fa3ccffcb1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: fb2d4c7a43812e44085ff4fa3ccffcb1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: fb2d4c7a43812e44085ff4fa3ccffcb1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: fb2d4c7a43812e44085ff4fa3ccffcb1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: fb2d4c7a43812e44085ff4fa3ccffcb1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: fb2d4c7a43812e44085ff4fa3ccffcb1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: fb2d4c7a43812e44085ff4fa3ccffcb1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: fb2d4c7a43812e44085ff4fa3ccffcb1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: fb2d4c7a43812e44085ff4fa3ccffcb1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: fb2d4c7a43812e44085ff4fa3ccffcb1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5407672407231045233, guid: fb2d4c7a43812e44085ff4fa3ccffcb1, type: 3}
-      propertyPath: m_Name
-      value: BigStalagmite
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fb2d4c7a43812e44085ff4fa3ccffcb1, type: 3}
 --- !u!114 &838726507 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2850380864368465454, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
@@ -5001,63 +4887,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3016322518147651604, guid: 945f7520f247c5e4a9583e7b96f584d6, type: 3}
   m_PrefabInstance: {fileID: 1077665991}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &853122395
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 398675255239502362, guid: d906d757a1f8f0d4bb99a7912dc86ea5, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: d906d757a1f8f0d4bb99a7912dc86ea5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: d906d757a1f8f0d4bb99a7912dc86ea5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: d906d757a1f8f0d4bb99a7912dc86ea5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: d906d757a1f8f0d4bb99a7912dc86ea5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: d906d757a1f8f0d4bb99a7912dc86ea5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: d906d757a1f8f0d4bb99a7912dc86ea5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: d906d757a1f8f0d4bb99a7912dc86ea5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: d906d757a1f8f0d4bb99a7912dc86ea5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: d906d757a1f8f0d4bb99a7912dc86ea5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 398675255239502362, guid: d906d757a1f8f0d4bb99a7912dc86ea5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5407672407231045233, guid: d906d757a1f8f0d4bb99a7912dc86ea5, type: 3}
-      propertyPath: m_Name
-      value: LittleStalagmite
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d906d757a1f8f0d4bb99a7912dc86ea5, type: 3}
 --- !u!1 &874899355
 GameObject:
   m_ObjectHideFlags: 0
@@ -31598,7 +31427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathNumber: 0
   DeathCount: {fileID: 1232375626}
-  timer: 120
+  timer: 10
   decrement: 0
   intensity: 0
 --- !u!1 &2141034189
