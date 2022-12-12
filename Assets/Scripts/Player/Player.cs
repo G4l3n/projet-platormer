@@ -75,9 +75,9 @@ public class Player : MonoBehaviour
         }
 
         // Dash
-        if (!isWallSliding || !isWallJumping)
+        if (isWallSliding || isWallJumping)
         {
-            Dash.canDash = true;
+            Dash.canDash = false;
         }
 
         // Jump

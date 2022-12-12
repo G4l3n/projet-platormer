@@ -57,7 +57,7 @@ public class Dash : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
-
+        Debug.Log(canDash);
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
