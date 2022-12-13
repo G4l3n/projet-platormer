@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 1648476911015843014}
   - component: {fileID: 2210083259145722413}
   m_Layer: 0
-  m_Name: TriggerFly
+  m_Name: TriggerFall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,12 +143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bat: {fileID: 640432331365929635}
+  startPos: {x: 0, y: 0, z: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
-  fallSpeed: 1
-  isFalling: 0
-  startPos: {x: 0, y: 0}
+  fallSpeed: 2
   acceleration:
     serializedVersion: 2
     m_Curve:
@@ -173,6 +172,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  isFalling: 0
 --- !u!1 &9003222875652693877
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +331,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &640432331365929635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,6 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef3f0340a5fee84abf04fa08db77f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounceForce: 9
 --- !u!1 &9003222875737768413
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +356,7 @@ GameObject:
   - component: {fileID: 9003222875737768412}
   - component: {fileID: 9003222875737768411}
   m_Layer: 0
-  m_Name: EyesLeft
+  m_Name: EyeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,7 +467,7 @@ GameObject:
   - component: {fileID: 9003222876371933411}
   - component: {fileID: 9003222876371933410}
   m_Layer: 0
-  m_Name: EyesRight
+  m_Name: EyeRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

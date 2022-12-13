@@ -14,7 +14,6 @@ public class BatAwake : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("enter");
             animator.SetBool("IsAwake", true);
         }
     }
@@ -22,7 +21,6 @@ public class BatAwake : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("enter");
             animator.SetBool("IsAwake", false);
         }
     }

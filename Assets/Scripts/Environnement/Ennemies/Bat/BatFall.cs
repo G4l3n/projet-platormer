@@ -6,25 +6,24 @@ using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class BatOnMove : MonoBehaviour
+public class BatFall : MonoBehaviour
 {
-    Animator animator = null;
-    Rigidbody2D rb = null;
+    [Header("Bat")]
     public Bat bat = null;
+    Animator animator = null;
+
+    [Header("Fall")]
     RaycastHit2D hit;
     public LayerMask groundLayer;
-    public float fallSpeed = -1f;
-    public bool isFalling = false;
-    public Vector2 startPos;
-    public AnimationCurve acceleration;
+    public float fallSpeed = 1f;
     private float t;
+    public AnimationCurve acceleration;
+    public bool isFalling = false;
     void Start()
     {
         hit = Physics2D.Raycast(transform.position, -Vector2.up, 50f, groundLayer);
-        animator = GetComponentInParent<Animator>();
-        rb = GetComponentInParent<Rigidbody2D>();
-        startPos = bat.transform.position;
         t = 0;
+        animator = GetComponentInParent<Animator>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -38,16 +37,17 @@ public class BatOnMove : MonoBehaviour
     {
         if (isFalling)
         {
-            var x = bat.transform.position.x;
-            var y = Mathf.Lerp(startPos.y, hit.point.y, acceleration.Evaluate(t));
-            bat.transform.position = new Vector3(x, y, bat.transform.position.z);
+            animator.SetBool("IsFalling", false);
+            var x = bat.startPos.x;
+            var y = Mathf.Lerp(bat.startPos.y, hit.point.y + 1f, acceleration.Evaluate(t));
+            bat.transform.position = new Vector3(x, y, bat.startPos.z);
             t += Time.deltaTime / fallSpeed;
         }
     }
     IEnumerator Fall()
     {
         isFalling = true;
-        yield return new WaitUntil(() => bat.transform.position.y <= hit.point.y + 2.5f);
+        yield return new WaitUntil(() => bat.transform.position.y <= hit.point.y + 1f);
         isFalling = false;
         animator.SetBool("IsFlying", true);
     }

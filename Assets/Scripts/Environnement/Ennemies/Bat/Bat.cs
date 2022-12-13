@@ -4,23 +4,34 @@ using UnityEngine;
 
 public class Bat : MonoBehaviour
 {
+    [Header("Bat")]
+    public Vector3 startPos;
+
+    [Header("Player")]
     private Player player;
-    Animator animator = null;
+    public float bounceForce = 9f;
     void Start()
     {
-        animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-    }
-    void Update()
-    {
-        
+        startPos = transform.position;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        foreach (ContactPoint2D contact in collision.contacts)
         {
-            GameManager.Instance.KillPlayer(player.gameObject);
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                if (contact.normal.y < 0)
+                {
+                    player.rb.AddForce(new Vector2(0, bounceForce), ForceMode2D.Impulse);
+                    Destroy(this.gameObject);
+                }
+                else
+                {
+                    GameManager.Instance.KillPlayer(player.gameObject);
+                }
+            }
         }
     }
 }
