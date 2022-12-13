@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Cinematique.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/credits.unity
+    guid: e74ec3993d3e23f458edd9f416242cbf
+  - enabled: 1
     path: Assets/Scenes/lvl0.unity
     guid: bc7e3c03979c913408eb8391ee0cd985
   - enabled: 0
@@ -50,8 +53,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/lvl8.unity
     guid: efbd3ef18d1a490499c1138c345acf86
-  - enabled: 1
-    path: Assets/Scenes/credits.unity
-    guid: e74ec3993d3e23f458edd9f416242cbf
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: d84f07836a1932249ab923676e0efc7c, type: 2}
