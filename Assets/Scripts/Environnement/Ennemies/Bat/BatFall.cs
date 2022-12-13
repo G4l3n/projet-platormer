@@ -37,7 +37,7 @@ public class BatFall : MonoBehaviour
     {
         if (isFalling)
         {
-            animator.SetBool("IsFalling", false);
+            animator.SetBool("IsFalled", true);
             var x = bat.startPos.x;
             var y = Mathf.Lerp(bat.startPos.y, hit.point.y + 1f, acceleration.Evaluate(t));
             bat.transform.position = new Vector3(x, y, bat.startPos.z);
@@ -50,5 +50,6 @@ public class BatFall : MonoBehaviour
         yield return new WaitUntil(() => bat.transform.position.y <= hit.point.y + 1f);
         isFalling = false;
         animator.SetBool("IsFlying", true);
+        bat.isFlying = true;
     }
 }
