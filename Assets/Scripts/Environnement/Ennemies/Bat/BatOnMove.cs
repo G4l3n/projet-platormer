@@ -13,13 +13,18 @@ public class BatOnMove : MonoBehaviour
     public Bat bat = null;
     RaycastHit2D hit;
     public LayerMask groundLayer;
-    public float fallSpeed = 1f;
+    public float fallSpeed = -1f;
     public bool isFalling = false;
+    public Vector2 startPos;
+    public AnimationCurve acceleration;
+    private float t;
     void Start()
     {
         hit = Physics2D.Raycast(transform.position, -Vector2.up, 50f, groundLayer);
         animator = GetComponentInParent<Animator>();
         rb = GetComponentInParent<Rigidbody2D>();
+        startPos = bat.transform.position;
+        t = 0;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,8 +39,9 @@ public class BatOnMove : MonoBehaviour
         if (isFalling)
         {
             var x = bat.transform.position.x;
-            var y = bat.transform.position.y;
-            bat.transform.position = new Vector3(x, y - fallSpeed * Time.deltaTime, bat.transform.position.z);
+            var y = Mathf.Lerp(startPos.y, hit.point.y, acceleration.Evaluate(t));
+            bat.transform.position = new Vector3(x, y, bat.transform.position.z);
+            t += Time.deltaTime / fallSpeed;
         }
     }
     IEnumerator Fall()
