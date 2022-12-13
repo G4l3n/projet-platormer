@@ -24,6 +24,13 @@ public class Pause : MonoBehaviour
         pauseMenu.SetActive(true);
         isPause = true;
         Time.timeScale = 0;
+        //AudioSource audioSource = FindObjectOfType<AudioSource>();
+        //AudioSource[] audios = AudioSource;
+
+        //foreach (AudioSource audio in audios)
+        //{
+        //    audio.Pause();
+        //}
     }
 
     public void DeactivatepauseMenu()
@@ -36,11 +43,11 @@ public class Pause : MonoBehaviour
     {
         if (!HaspauseMenu())
         {
-            ActivatepauseMenu();   
+            ActivatepauseMenu();
         }
         else
         {
-            DeactivatepauseMenu();          
+            DeactivatepauseMenu();
         }
     }
     //gameobject set active pour le bouton resume

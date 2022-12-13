@@ -129,12 +129,10 @@ public class Player : MonoBehaviour
         movement = moveValue.Get<Vector2>();
         if (movement == Vector2.zero)
         {
-            Debug.Log("stop");
             GetComponent<AudioSource>().Stop();
         }
         else
         {
-            Debug.Log("play");
             GetComponent<AudioSource>().Play();
         }
 
