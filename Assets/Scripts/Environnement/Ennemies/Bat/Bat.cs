@@ -8,23 +8,23 @@ public class Bat : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        //StartCoroutine(Test());
+        StartCoroutine(Test());
     }
     void Update()
     {
         
     }
-    //IEnumerator Test()
-    //{
-    //    yield return new WaitForSeconds(3);
-    //    animator.SetBool("IsAwake", true);
-    //    yield return new WaitForSeconds(3);
-    //    animator.SetBool("IsAwake", false);
-    //    yield return new WaitForSeconds(3);
-    //    animator.SetBool("IsAwake", true);
-    //    yield return new WaitForSeconds(3);
-    //    animator.SetBool("IsFlying", true);
-    //    yield return new WaitForSeconds(3);
-    //    Debug.Log("OK");
-    //}
+    IEnumerator Test()
+    {
+        yield return new WaitForSeconds(3);
+        animator.SetBool("IsAwake", true);
+        yield return new WaitForSeconds(3);
+        animator.SetBool("IsAwake", false);
+        yield return new WaitForSeconds(3);
+        animator.SetBool("IsAwake", true);
+        yield return new WaitForSeconds(3);
+        animator.SetBool("IsFlying", true);
+        yield return new WaitForSeconds(3);
+        Debug.Log("OK");
+    }
 }
