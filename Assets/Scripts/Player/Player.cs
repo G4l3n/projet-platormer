@@ -127,17 +127,17 @@ public class Player : MonoBehaviour
     public void OnMove(InputValue moveValue)
     {
         movement = moveValue.Get<Vector2>();
-        //if (movement == Vector2.zero)
-        //{
-        //    Debug.Log("stop");
-        //    GetComponent<AudioSource>().Stop();
-        //}
-        //else
-        //{
-        //    Debug.Log("play");
-        //    GetComponent<AudioSource>().Play();
-        //}
-        
+        if (movement == Vector2.zero)
+        {
+            Debug.Log("stop");
+            GetComponent<AudioSource>().Stop();
+        }
+        else
+        {
+            Debug.Log("play");
+            GetComponent<AudioSource>().Play();
+        }
+
     }
 
     public IEnumerator DontMove()
