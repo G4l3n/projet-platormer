@@ -798,6 +798,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -3.5574064
       objectReference: {fileID: 0}
+    - target: {fileID: 2210083259145722413, guid: 53d74794a331e5240bad6ad43ed7231b, type: 3}
+      propertyPath: fallSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6886716986759802449, guid: 53d74794a331e5240bad6ad43ed7231b, type: 3}
       propertyPath: m_Size.y
       value: 9.045001
