@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 8946115128278030406}
   - component: {fileID: 4995514556891415743}
   - component: {fileID: 4202817514837629991}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: platformeTraversable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
