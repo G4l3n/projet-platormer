@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 13, y: 4.776017}
+  m_Size: {x: 10.482772, y: 4.776017}
   m_EdgeRadius: 0
 --- !u!114 &2873863452204733859
 MonoBehaviour:
@@ -81,6 +81,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5787143021859787123}
   - component: {fileID: 1648476911015843014}
+  - component: {fileID: 2210083259145722413}
   m_Layer: 0
   m_Name: TriggerFly
   m_TagString: Untagged
@@ -129,6 +130,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2075009, y: 2.9231713}
   m_EdgeRadius: 0
+--- !u!114 &2210083259145722413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922705890541037919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f4e99575780d344bb39c73703ef9d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &9003222875652693877
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +270,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10812721, y: -0.6902618}
+  m_Offset: {x: 0.14636415, y: 0.0004131794}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -265,7 +281,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8024064, y: 0.36947644}
+  m_Size: {x: 0.7076473, y: 1.7508264}
   m_EdgeRadius: 0
 --- !u!50 &266296889593787179
 Rigidbody2D:
@@ -300,7 +316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef3f0340a5fee84abf04fa08db77f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
 --- !u!1 &9003222875737768413
 GameObject:
   m_ObjectHideFlags: 0

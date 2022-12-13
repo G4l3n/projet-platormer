@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BatAwake : MonoBehaviour
 {
-    private Animator animator = null;
+    Animator animator = null;
     void Start()
     {
         animator = GetComponentInParent<Animator>();

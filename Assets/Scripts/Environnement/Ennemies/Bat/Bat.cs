@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bat : MonoBehaviour
 {
-    public Animator animator = null;
+    Animator animator = null;
     void Start()
     {
         animator = GetComponent<Animator>();
