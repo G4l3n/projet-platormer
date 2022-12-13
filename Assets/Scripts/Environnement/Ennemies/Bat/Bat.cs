@@ -4,27 +4,23 @@ using UnityEngine;
 
 public class Bat : MonoBehaviour
 {
+    private Player player;
     Animator animator = null;
     void Start()
     {
         animator = GetComponent<Animator>();
-        StartCoroutine(Test());
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
     void Update()
     {
         
     }
-    IEnumerator Test()
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        yield return new WaitForSeconds(3);
-        animator.SetBool("IsAwake", true);
-        yield return new WaitForSeconds(3);
-        animator.SetBool("IsAwake", false);
-        yield return new WaitForSeconds(3);
-        animator.SetBool("IsAwake", true);
-        yield return new WaitForSeconds(3);
-        animator.SetBool("IsFlying", true);
-        yield return new WaitForSeconds(3);
-        Debug.Log("OK");
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            GameManager.Instance.KillPlayer(player.gameObject);
+        }
     }
 }
