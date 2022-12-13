@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.ShaderGraph.Drawing.Inspector.PropertyDrawers;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
@@ -8,6 +9,7 @@ public class BatOnMove : MonoBehaviour
 {
     Animator animator = null;
     Rigidbody2D rb = null;
+    public Bat bat = null;
     RaycastHit2D hit;
     public LayerMask groundLayer;
     void Start()
@@ -20,14 +22,19 @@ public class BatOnMove : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(Fall());
+            //StartCoroutine(Fall());
         }
     }
 
-    IEnumerator Fall()
-    {
-        rb.gravityScale = 2f;
-        yield return transform.position.y == hit.point.y + 3;
-        animator.SetBool("IsFlying", true);
-    }
+    //IEnumerator Fall()
+    //{
+    //    rb.gravityScale = 2f;
+    //    while (transform.position.y <= hit.point.y + 2.5f)
+    //    {
+    //        transform.position = new Vector3(x + moveSpeed * Time.deltaTime, y, startPos.z);
+    //    }
+    //    rb.gravityScale = 0f;
+    //    rb.simulated = false;
+    //    animator.SetBool("IsFlying", true);
+    //}
 }

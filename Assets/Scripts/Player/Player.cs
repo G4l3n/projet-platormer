@@ -53,11 +53,6 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void Update()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
         // Movement
@@ -72,12 +67,6 @@ public class Player : MonoBehaviour
         {
             renderer.flipX = movement.x < 0;
             isReverse = movement.x < 0;
-        }
-
-        // Dash
-        if (isWallSliding || isWallJumping)
-        {
-            Dash.canDash = false;
         }
 
         // Jump
@@ -118,7 +107,6 @@ public class Player : MonoBehaviour
 
         if (isWallSliding && isMoving)
         {
-            Dash.canDash = false;
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, wallSlideSpeed, float.MaxValue));
         }
     }
