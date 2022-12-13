@@ -17,11 +17,6 @@ public class RoundTrip : MonoBehaviour
         velocity = direction * speed;
     }
 
-    void Update()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
         Vector2 pos = transform.position;

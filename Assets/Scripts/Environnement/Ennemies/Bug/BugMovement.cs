@@ -24,15 +24,20 @@ public class BugMovement : MonoBehaviour
 
         //Bug walk forward in the direction of the player at his start position
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        if (startPos.x > player.transform.position.x)
-        {
-            renderer.flipX = true;
-            moveSpeed = -moveSpeed;
-        }
     }
 
     void Update()
     {
+        if (transform.position.x > player.transform.position.x)
+        {
+            renderer.flipX = true;
+            moveSpeed = - Mathf.Abs(moveSpeed);
+        }
+        else
+        {
+            renderer.flipX = false;
+            moveSpeed = Mathf.Abs(moveSpeed);
+        }
         // check if the bug is outside of the player vision
         if (transform.position.x > player.transform.position.x && transform.position.x - player.transform.position.x > 15
             || transform.position.x < player.transform.position.x && player.transform.position.x - transform.position.x > 15
