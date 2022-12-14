@@ -17,12 +17,14 @@ public class Dash : MonoBehaviour
     private TrailRenderer tr;
     public bool isReverse;
     Rigidbody2D rb = null;
+    private Light2D bodyLight;
 
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        bodyLight = GameObject.FindGameObjectWithTag("BodyLight").GetComponent<Light2D>();
         rb = GetComponent<Rigidbody2D>();
         originalGravity = rb.gravityScale;
     }
@@ -53,10 +55,10 @@ public class Dash : MonoBehaviour
         }
     }
 
-
     public IEnumerator Dashing()
     {
         canDash = false;
+        bodyLight.enabled = false;
         isDashing = true;
         //Debug.Log(canDash);
         rb.gravityScale = 0f;
@@ -68,6 +70,7 @@ public class Dash : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+        bodyLight.enabled = true;
     }
     //https://www.youtube.com/watch?v=2kFGmuPHiA0 : dash
 }
