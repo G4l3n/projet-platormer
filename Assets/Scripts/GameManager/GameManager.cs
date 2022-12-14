@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
     public float decrement;
     public float intensity;
 
+    [Header("Sound")]
+    private AudioSource backgroundSound;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -45,6 +48,7 @@ public class GameManager : MonoBehaviour
         //Player
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerLight = GameObject.FindGameObjectWithTag("PlayerLight").GetComponent<Light2D>();
+        backgroundSound = GameObject.FindGameObjectWithTag("BackgroundSound").GetComponent<AudioSource>();
 
         //Death count
         //http://www.unity3d-france.com/unity/phpBB3/viewtopic.php?t=8741
