@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb = null;
     public bool canJump = false;
     public float jumpForce = 9.0f;
-    private float originalGravity;
     public float rayLenght =1;
 
     [Header("Dash")]
@@ -48,7 +47,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        originalGravity = rb.gravityScale;
         renderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
@@ -76,7 +74,6 @@ public class Player : MonoBehaviour
         animator.SetBool("IsJumping", !canJump);
 
         // Wall Jump https://www.youtube.com/watch?v=adT3vSD-74Q&ab_channel=MuddyWolf
-
         jumpForceBack = 4.5f;
         if (!isReverse)
         {
@@ -86,15 +83,13 @@ public class Player : MonoBehaviour
         if (!isReverse)
         {
             wallCheckHit = Physics2D.Raycast(transform.position, new Vector2(wallDistance, 0), wallDistance, groundLayer);
-            //Debug.DrawRay(transform.position, new Vector2(wallDistance, 0), Color.green);
         }
         else
         {
             wallCheckHit = Physics2D.Raycast(transform.position, new Vector2(-wallDistance, 0), wallDistance, groundLayer);
-            //Debug.DrawRay(transform.position, new Vector2(-wallDistance, 0), Color.green);
         }
 
-        if (wallCheckHit && !isGrounded)
+        if (wallCheckHit && !isGrounded && isMoving)
         {
             canJump = true;
             isWallSliding = true;
@@ -127,20 +122,12 @@ public class Player : MonoBehaviour
     public void OnMove(InputValue moveValue)
     {
         movement = moveValue.Get<Vector2>();
-        //if (movement == Vector2.zero)
-        //{
-        //    GetComponent<AudioSource>().Stop();
-        //}
-        //else
-        //{
-        //    GetComponent<AudioSource>().Play();
-        //}
-
     }
 
     public IEnumerator DontMove()
     {
         Dash.canDash = false;
+        canJump = false;
         isWallJumping = true;
         isWallSliding = false;
         rb.velocity = new Vector2(rb.velocity.x, 0);
