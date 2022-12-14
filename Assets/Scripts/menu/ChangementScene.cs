@@ -5,10 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class ChangementScene : MonoBehaviour
 {
-    public string sceneName = "";
+    Animator transitionlvl;
+
+
+    public void Start()
+    {
+        transitionlvl = GetComponent<Animator>();
+        
+        
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        SceneManager.LoadScene(sceneName); 
+        transitionlvl.SetTrigger("fadein");
+        Changement();
+    }
+
+    public void Changement()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
