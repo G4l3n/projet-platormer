@@ -7,12 +7,9 @@ public class ChangementScene : MonoBehaviour
 {
     Animator transitionlvl;
 
-
     public void Start()
     {
-        transitionlvl = GetComponent<Animator>();
-        
-        
+        transitionlvl = GetComponent<Animator>();   
     }
 
     void OnTriggerEnter2D(Collider2D other)

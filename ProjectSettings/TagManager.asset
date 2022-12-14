@@ -51,3 +51,6 @@ TagManager:
   - name: Non-Lightable
     uniqueID: 2958805217
     locked: 0
+  - name: Lightable (1)
+    uniqueID: 1272633061
+    locked: 0
