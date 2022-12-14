@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Cinematique.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/lvl1.unity
+    path: Assets/Scenes/lvlMaudit.unity
     guid: 631a9dddf27dcf844a8f503aa81c76f7
   - enabled: 1
     path: Assets/Scenes/lvl2.unity
