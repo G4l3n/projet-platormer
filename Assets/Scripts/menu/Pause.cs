@@ -9,10 +9,12 @@ public class Pause : MonoBehaviour
     [Header("Pause")]
     public GameObject pauseMenu;
     public bool isPause = false;
+    Animator animator;
 
     private void Start()
     {
         DeactivatepauseMenu();
+        animator = GetComponent<Animator>();
     }
 
     bool HaspauseMenu()
@@ -21,7 +23,9 @@ public class Pause : MonoBehaviour
     }
     void ActivatepauseMenu()
     {
+        Debug.Log("animation");
         pauseMenu.SetActive(true);
+        animator.Play("AnimationLight");
         isPause = true;
         Time.timeScale = 0;
         //AudioSource audioSource = FindObjectOfType<AudioSource>();
