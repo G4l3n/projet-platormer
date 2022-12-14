@@ -23,18 +23,16 @@ public class Pause : MonoBehaviour
     }
     void ActivatepauseMenu()
     {
-        Debug.Log("animation");
         pauseMenu.SetActive(true);
         animator.Play("AnimationLight");
         isPause = true;
         Time.timeScale = 0;
-        //AudioSource audioSource = FindObjectOfType<AudioSource>();
-        //AudioSource[] audios = AudioSource;
+        AudioSource[] audios = FindObjectsOfType<AudioSource>();
 
-        //foreach (AudioSource audio in audios)
-        //{
-        //    audio.Pause();
-        //}
+        foreach (AudioSource audio in audios)
+        {
+            audio.Pause();
+        }
     }
 
     public void DeactivatepauseMenu()
@@ -42,6 +40,12 @@ public class Pause : MonoBehaviour
         pauseMenu.SetActive(false);
         isPause = false;
         Time.timeScale = 1;
+
+        AudioSource[] audios = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource audio in audios)
+        {
+            audio.Play();
+        }
     }
     private void OnPause(InputValue pauseValue)
     {
