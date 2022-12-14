@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 1682006571414491140}
   - component: {fileID: 1682006571414491147}
   - component: {fileID: 1682006571414491146}
-  - component: {fileID: 1682006571414491145}
+  - component: {fileID: 3525295615279760691}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -560,7 +560,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1682006571414491144}
   m_Enabled: 1
---- !u!82 &1682006571414491145
+--- !u!82 &3525295615279760691
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -572,7 +572,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b820570c994ebcf45b9a4cf417fdbfb2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.35
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 1682006572089098338}
   - component: {fileID: 1682006572089098339}
   m_Layer: 0
-  m_Name: sonBrouhahaha
+  m_Name: BackgroundSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
