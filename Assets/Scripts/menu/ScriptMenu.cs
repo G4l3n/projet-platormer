@@ -19,7 +19,7 @@ public class ScriptMenu : MonoBehaviour
 
     public void Credits()
     {
-        
+
         SceneManager.LoadScene("credits");
 
     }
@@ -28,13 +28,13 @@ public class ScriptMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
-   
-   
 
-
-    public void Update()
+    private void Update()
     {
-        
-
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            MainMenu();
+        }
     }
+
 }

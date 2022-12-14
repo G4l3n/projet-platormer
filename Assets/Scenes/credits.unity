@@ -471,7 +471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n<SIZE=150>Credits</SIZE=200>\n\n\nAssets : \r\n\r<SIZE=80>\npack d'arbres
+  m_text: "<SIZE=150>Credits</SIZE=200>\n\n\nAssets : \r\n\r<SIZE=80>\npack d'arbres
     de base :\n https://trixelized.itch.io/starstring-fields\r\n\npack grotte : \nhttps://apokalips123.itch.io/16x16-cave\n\r\ninspiration
     du cafard : \nhttps://www.brik.co/blogs/pixel-art/cockroach-pixel-art\n\r\ninspiration
     du player :\n https://markiro.itch.io/2d-male-character-sprites\n\r\ninspiration
