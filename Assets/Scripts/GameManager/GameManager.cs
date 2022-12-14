@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Player")]
     private Player player;
+    public float timer;
 
     [Header("Kill")]
     public int DeathNumber;
@@ -24,12 +25,12 @@ public class GameManager : MonoBehaviour
 
     [Header("Light")]
     private Light2D playerLight;
-    public float timer;
-    public float decrement;
-    public float intensity;
+    public float lightDecrement;
 
     [Header("Sound")]
     private AudioSource backgroundSound;
+    public float soundIncrement;
+
 
     private void Awake()
     {
@@ -59,13 +60,21 @@ public class GameManager : MonoBehaviour
         }
 
         //Light intensity
-        intensity = playerLight.intensity;
-        Pourcentage(timer, intensity);
-        if (decrement != 0)
+        IntensityPourcentage(timer, playerLight.intensity);
+        if (lightDecrement != 0)
         {
             StartCoroutine(Intensity());
         }
+
+        //Sound Volume
+        VolumePourcentage(timer, backgroundSound.volume);
+        if (soundIncrement != 0)
+        {
+            StartCoroutine(Volume());
+        }
     }
+
+    //Kill Condition
     public void FixedUpdate()
     {
         if (playerLight.intensity <= 0f)
@@ -74,6 +83,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //Kill Player
     public void KillPlayer(GameObject player)
     {
         KillCount();
@@ -85,18 +95,39 @@ public class GameManager : MonoBehaviour
         DeathNumber++;
         PlayerPrefs.SetInt("DeathNumber", DeathNumber);
     }
-    private void Pourcentage(float timer, float intensite)
+
+    //Light Intensity
+    private void IntensityPourcentage(float timer, float intensite)
     {
-        decrement = (intensite / timer);
+        lightDecrement = (intensite / timer);
     }
+
     private IEnumerator Intensity()
     {
         yield return new WaitForSeconds(1f);
-        playerLight.intensity -= decrement;
+        playerLight.intensity -= lightDecrement;
 
         if (playerLight.intensity > 0)
         {
             StartCoroutine(Intensity());
+        }
+    }
+
+    //Sound Volume
+    private void VolumePourcentage(float timer, float volume)
+    {
+        soundIncrement = (volume / timer);
+        backgroundSound.volume = 0f;
+    }
+
+    private IEnumerator Volume()
+    {
+        yield return new WaitForSeconds(1f);
+        backgroundSound.volume += soundIncrement;
+
+        if (backgroundSound.volume < 1)
+        {
+            StartCoroutine(Volume());
         }
     }
 }
