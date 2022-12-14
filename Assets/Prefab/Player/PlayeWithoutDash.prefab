@@ -309,11 +309,17 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  stalactiteLayer:
+    serializedVersion: 2
+    m_Bits: 0
   isGrounded: 0
   wallJumpTime: 0.2
   wallSlideSpeed: 0.3
   wallDistance: 0.5
   isWallSliding: 0
+  jumpForceBack: 4.5
+  dontMoveTime: 0
+  isWallJumping: 0
 --- !u!1 &7724729350097811362
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,10 +365,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8645ab92e2e75c8429cbc3c82c4eb3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pause: {fileID: 0}
   player: {fileID: 7724729350096915305}
   myPlayer: {fileID: 7724729350096915309}
   rotationZ: 0
+  Pause: {fileID: 0}
 --- !u!1 &7724729350899926406
 GameObject:
   m_ObjectHideFlags: 0
