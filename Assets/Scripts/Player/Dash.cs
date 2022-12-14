@@ -58,7 +58,7 @@ public class Dash : MonoBehaviour
     public IEnumerator Dashing()
     {
         canDash = false;
-        bodyLight.enabled = false;
+        GameManager.Instance.dashPicto.enabled = false;
         isDashing = true;
         //Debug.Log(canDash);
         rb.gravityScale = 0f;
@@ -70,7 +70,7 @@ public class Dash : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
-        bodyLight.enabled = true;
+        GameManager.Instance.dashPicto.enabled = true;
     }
     //https://www.youtube.com/watch?v=2kFGmuPHiA0 : dash
 }

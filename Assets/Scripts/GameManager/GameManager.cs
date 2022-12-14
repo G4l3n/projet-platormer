@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
 
 // Merci à Youen pour l'aide
 public class GameManager : MonoBehaviour
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
     [Header("Kill")]
     public int DeathNumber;
     public TMP_Text DeathCount = null;
+    public Image dashPicto = null;
 
     [Header("Light")]
     private Light2D playerLight;
