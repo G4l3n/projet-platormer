@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     private AudioSource backgroundSound;
     public float soundIncrement;
 
+    public Animator mortplayer;
 
     private void Awake()
     {
@@ -72,6 +73,8 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(Volume());
         }
+
+        mortplayer = GetComponent<Animator>();
     }
 
     //Kill Condition
@@ -87,6 +90,7 @@ public class GameManager : MonoBehaviour
     public void KillPlayer(GameObject player)
     {
         KillCount();
+        mortplayer.SetTrigger("fadein");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
