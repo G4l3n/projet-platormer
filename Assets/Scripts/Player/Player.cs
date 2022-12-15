@@ -74,12 +74,6 @@ public class Player : MonoBehaviour
         animator.SetBool("IsJumping", !canJump);
 
         // Wall Jump https://www.youtube.com/watch?v=adT3vSD-74Q&ab_channel=MuddyWolf
-        jumpForceBack = 4.5f;
-        if (!isReverse)
-        {
-            jumpForceBack = -jumpForceBack;
-        }
-
         if (!isReverse)
         {
             wallCheckHit = Physics2D.Raycast(transform.position, new Vector2(wallDistance, 0), wallDistance, groundLayer);
@@ -130,6 +124,14 @@ public class Player : MonoBehaviour
         canJump = false;
         isWallJumping = true;
         isWallSliding = false;
+        if(isReverse)
+        {
+            jumpForceBack = Mathf.Abs(jumpForceBack);
+        }
+        else
+        {
+            jumpForceBack = -Mathf.Abs(jumpForceBack);
+        }
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.AddForce(new Vector2(jumpForceBack, jumpForce), ForceMode2D.Impulse);
         yield return new WaitForSeconds(dontMoveTime);
