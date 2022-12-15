@@ -14,8 +14,11 @@ public class ChangementScene : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        transitionlvl.SetTrigger("fadein");
-        Changement();
+        if (other.gameObject.tag == "Player")
+        {
+            transitionlvl.SetTrigger("fadein");
+            Changement();
+        }
     }
 
     public void Changement()

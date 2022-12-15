@@ -5,6 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/Ethan.unity
+    guid: c22b1058ef526ae4a975f0aa873239be
+  - enabled: 0
+    path: Assets/Scenes/lvlMaudit.unity
+    guid: 631a9dddf27dcf844a8f503aa81c76f7
+  - enabled: 0
+    path: Assets/Scenes/test.unity
+    guid: d94bff0296e1c6e4db1778f655c73b85
   - enabled: 1
     path: Assets/Scenes/PreStart.unity
     guid: a385e655be118e048a7ee6b53c65449f
@@ -17,18 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cinematique.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
-    path: Assets/Scenes/Ethan.unity
-    guid: c22b1058ef526ae4a975f0aa873239be
-  - enabled: 0
-    path: Assets/Scenes/test.unity
-    guid: d94bff0296e1c6e4db1778f655c73b85
-  - enabled: 0
-    path: Assets/Scenes/Cinematique.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
-    path: Assets/Scenes/lvlMaudit.unity
-    guid: 631a9dddf27dcf844a8f503aa81c76f7
   - enabled: 1
     path: Assets/Scenes/lvl1.unity
     guid: 337104e95cb20f54a98ea61103e73040
