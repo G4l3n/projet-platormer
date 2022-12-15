@@ -1790,7 +1790,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 2
+  m_text: The Ascent
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
   m_sharedMaterial: {fileID: -2602229101122462270, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
@@ -3184,7 +3184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &755336184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3688,7 +3688,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 6
+  m_text: Anciens Ruins
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
   m_sharedMaterial: {fileID: -2602229101122462270, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
@@ -3930,7 +3930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &879244499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5006,7 +5006,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 3
+  m_text: The Glowing forest
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
   m_sharedMaterial: {fileID: -2602229101122462270, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
@@ -5686,7 +5686,7 @@ SpriteRenderer:
   m_Size: {x: 1.47, y: 0.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1465942996
@@ -5762,7 +5762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 4
+  m_text: The Swamp
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
   m_sharedMaterial: {fileID: -2602229101122462270, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
@@ -5897,7 +5897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 1
+  m_text: Dephts
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
   m_sharedMaterial: {fileID: -2602229101122462270, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
@@ -6833,7 +6833,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 8
+  m_text: The Skylight
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
   m_sharedMaterial: {fileID: -2602229101122462270, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
@@ -7103,7 +7103,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 5
+  m_text: The Temple
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
   m_sharedMaterial: {fileID: -2602229101122462270, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
@@ -7730,7 +7730,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 7
+  m_text: The Mine Shaft
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
   m_sharedMaterial: {fileID: -2602229101122462270, guid: 99df419ce89bd8842a926446c7f00ca4, type: 2}
