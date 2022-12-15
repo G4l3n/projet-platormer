@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
-// Merci à Youen pour l'aide
+// Merci à Youenn pour l'aide
 public class GameManager : MonoBehaviour
 {
     //Singleton

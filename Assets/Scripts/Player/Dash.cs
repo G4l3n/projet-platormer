@@ -10,7 +10,7 @@ public class Dash : MonoBehaviour
     public bool canDash = true;
     public bool isDashing { get; private set; }
     private float dashingPower = 24f;
-    private float dashingCooldown = 1f;
+    private float dashingCooldown = 1f; 
     private float dashingTime = 0.15f;
     private float originalGravity;
     [SerializeField]
@@ -18,7 +18,6 @@ public class Dash : MonoBehaviour
     public bool isReverse;
     Rigidbody2D rb = null;
     private Light2D bodyLight;
-
 
     // Start is called before the first frame update
     void Start()

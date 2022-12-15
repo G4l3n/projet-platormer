@@ -551,6 +551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1003586175727043377, guid: cfeccd449021c1549aa27d5e0f166603, type: 3}
+  Audio: []
   isPause: 0
 --- !u!81 &1682006571414491146
 AudioListener:
@@ -571,7 +572,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b820570c994ebcf45b9a4cf417fdbfb2, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

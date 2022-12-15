@@ -8,6 +8,7 @@ public class Pause : MonoBehaviour
 {
     [Header("Pause")]
     public GameObject pauseMenu;
+    [SerializeField] private AudioSource[] Audio;
     public bool isPause = false;
     Animator animator;
 
@@ -27,12 +28,7 @@ public class Pause : MonoBehaviour
         animator?.Play("AnimationLight");
         isPause = true;
         Time.timeScale = 0;
-        AudioSource[] audios = FindObjectsOfType<AudioSource>();
-
-        foreach (AudioSource audio in audios)
-        {
-            audio.Pause();
-        }
+        AudioListener.pause = true;
     }
 
     public void DeactivatepauseMenu()
@@ -40,12 +36,11 @@ public class Pause : MonoBehaviour
         pauseMenu.SetActive(false);
         isPause = false;
         Time.timeScale = 1;
-
-        AudioSource[] audios = FindObjectsOfType<AudioSource>();
-        foreach (AudioSource audio in audios)
-        {
-            audio.Play();
-        }
+        AudioListener.pause = false;
+        //foreach (AudioSource audio in Audio)
+        //{
+        //    audio.Play();
+        //}
     }
     private void OnPause(InputValue pauseValue)
     {
