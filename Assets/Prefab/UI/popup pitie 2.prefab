@@ -570,7 +570,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &5173543862111299794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1494,10 +1494,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
-        m_MethodName: DeactivatepauseMenu
-        m_Mode: 1
+      - m_Target: {fileID: 8360224085354899938}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2369,7 +2369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8360224085354899942
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2836,7 +2836,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8360224085580059240}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -3231,7 +3231,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8360224085804561595}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6114384341464004099}
+        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
+        m_MethodName: retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8833585336620205958
 GameObject:
   m_ObjectHideFlags: 0
@@ -3377,6 +3389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3992292900747393561}
   - component: {fileID: 2187458887516448525}
+  - component: {fileID: 6114384341464004099}
   m_Layer: 0
   m_Name: ScriptMenu
   m_TagString: Untagged
@@ -3411,4 +3424,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d13fd0e301fbf847af926b3f00f14e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightInMenu: {fileID: 0}
+--- !u!114 &6114384341464004099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9192590743345926060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7ee8dddb7a8c6458b47ec29d27c563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
