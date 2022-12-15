@@ -10,6 +10,8 @@ public class Retry : MonoBehaviour
 
     public void retry()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 }

@@ -2824,12 +2824,20 @@ PrefabInstance:
       value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 8360224084877627638, guid: b94328d7801c30349aab72fbaad93601, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360224084877627638, guid: b94328d7801c30349aab72fbaad93601, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1142553043}
     - target: {fileID: 8360224084877627638, guid: b94328d7801c30349aab72fbaad93601, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DeactivatepauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8360224084877627638, guid: b94328d7801c30349aab72fbaad93601, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Pause, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8360224084879152215, guid: b94328d7801c30349aab72fbaad93601, type: 3}
       propertyPath: m_fontColor32.rgba
