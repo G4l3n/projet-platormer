@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
-using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
+
 
 public class BugMovement : MonoBehaviour
 {
@@ -65,7 +65,7 @@ public class BugMovement : MonoBehaviour
                 }
                 
                 //If the player jump on the bug, he bounce on him and the bug is killed
-                if  (contact.normal.y != 0)
+                else if  (contact.normal.y != 0)
                 {
                     player.rb.AddForce(new Vector2(0, bounceForce), ForceMode2D.Impulse);
                     Destroy(this.gameObject);

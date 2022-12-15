@@ -14,6 +14,8 @@ public class Bat : MonoBehaviour
     [Header("Player")]
     private Player player;
     public float bounceForce = 9f;
+
+    
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
