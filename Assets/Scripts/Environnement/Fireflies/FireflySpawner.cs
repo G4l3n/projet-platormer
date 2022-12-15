@@ -7,7 +7,7 @@ public class FireflySpawner : MonoBehaviour
 {
     [Header("Spawner")]
     private bool canSpawn = true;
-    private float dispawnTime = 5f;
+    public float dispawnTime = 5f;
 
     [Header("Object to spawn")]
     public GameObject firefly;
