@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(Volume());
         }
 
-        mortplayer = GetComponent<Animator>();
+        
     }
 
     //Kill Condition
