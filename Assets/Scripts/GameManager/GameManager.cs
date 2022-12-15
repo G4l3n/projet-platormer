@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
     public void KillPlayer(GameObject player)
     {
         KillCount();
-        mortplayer.SetTrigger("fadein");
+        //mortplayer.SetTrigger("fadein");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
