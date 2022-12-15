@@ -24,7 +24,7 @@ public class Pause : MonoBehaviour
     void ActivatepauseMenu()
     {
         pauseMenu.SetActive(true);
-        animator.Play("AnimationLight");
+        animator?.Play("AnimationLight");
         isPause = true;
         Time.timeScale = 0;
         AudioSource[] audios = FindObjectsOfType<AudioSource>();
