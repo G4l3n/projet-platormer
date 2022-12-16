@@ -16,7 +16,7 @@ public class ChangementScene : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            transitionlvl.SetTrigger("fadein");
+            //transitionlvl.SetTrigger("fadein");
             Changement();
         }
     }

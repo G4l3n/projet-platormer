@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering.Universal;
 
 public class Dash : MonoBehaviour
 {
@@ -17,13 +15,11 @@ public class Dash : MonoBehaviour
     private TrailRenderer tr;
     public bool isReverse;
     Rigidbody2D rb = null;
-    private Light2D bodyLight;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        bodyLight = GameObject.FindGameObjectWithTag("BodyLight").GetComponent<Light2D>();
         rb = GetComponent<Rigidbody2D>();
         originalGravity = rb.gravityScale;
     }

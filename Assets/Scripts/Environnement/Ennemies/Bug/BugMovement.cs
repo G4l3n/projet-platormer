@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
+=======
+>>>>>>> d4854e0 (zefk)
 
+using UnityEngine;
 public class BugMovement : MonoBehaviour
 {
     [Header("Bug")]
